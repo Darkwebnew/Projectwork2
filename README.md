@@ -186,3 +186,109 @@ Ensures **patient data privacy** and **medical compliance readiness**.
 ✓ CUDA (optional)
 ✓ Git
 ```
+
+## 🔧 Setup Steps
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/yourusername/CLINICAL-SCAN-SUPPORT-SYSTEM.git
+cd CLINICAL-SCAN-SUPPORT-SYSTEM
+```
+
+## 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run Application
+
+```bash
+streamlit run app.py
+```
+
+### 4️⃣ Train AI Model (Optional)
+
+```bash
+python train_lung_model.py
+```
+
+### Trained model saved as:
+
+```bash
+lung_classification_model.h5
+```
+
+---
+
+## 🌍 Deployment
+
+- Local deployment using Streamlit
+- GPU-based training environment
+- Streamlit Cloud / AWS ready
+- Modular and cloud-scalable architecture
+
+---
+
+## 🔮 Future Scope
+
+- Hospital dashboard analytics
+- Android mobile application
+- Multi-organ disease detection
+- Blockchain medical audit trail
+- IoT medical device integration
+- Real-time hospital system APIs
+
+---
+
+## 🎓 Academic Relevance
+
+- Final Year Engineering Project
+- IEEE research-paper-ready architecture
+- Healthcare AI use case
+- Demonstrates AI + Security + Deployment
+
+
+---
+
+## 👨‍⚕️ Authors
+
+| Name                     | Role         | GitHub                                                                       |
+| ------------------------ | ------------ | ---------------------------------------------------------------------------- |
+| **Sriram V**             | Project Lead | [https://github.com/darkwebnew](https://github.com/darkwebnew)               |
+| **Swedha V**             | Mentor       | [https://github.com/swedha333](https://github.com/swedha333)                 |
+| **Selvakumar R**         | Co-Mentor    | [https://github.com/selvasachein](https://github.com/selvasachein)           |
+| **Surothaaman R**        | Contributor  | [https://github.com/surothaaman](https://github.com/surothaaman)             |
+| **Andrew Varhese V S** | Contributor  | [https://github.com/Andrewvarghese653](https://github.com/Andrewvarghese653) |
+| **Praveen C K**           | Contributor  | [https://github.com/praveenck23009864](https://github.com/praveenck23009864) |
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see [LICENSE](https://github.com/Darkwebnew/Projectwork2/blob/main/LICENSE.txt) for details.
+
+---
+
+## 📸 Screenshots
+
+| Dashboard                                                                         | AI Prediction                                                                       | PDF Report                                                                   |
+| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| ![Dashboard](https://user-images.githubusercontent.com/placeholder/dashboard.png) | ![Prediction](https://user-images.githubusercontent.com/placeholder/prediction.png) | ![PDF Report](https://user-images.githubusercontent.com/placeholder/pdf.png) |
+
+---
+
+## 🙏 Acknowledgments
+
+### 🎓 Academic Guidance: Swedha V, Saveetha Engineering College
+### 🔬 Research References: Kaggle Chest X-ray datasets, MobileNetV2, TensorFlow/Keras tutorials
+### 🛠️ Tools & Libraries: TensorFlow, Keras, Streamlit, SQLite, AES / Fernet
+
+---
+
+## 📞 Contact
+
+Project Maintainer: [Sriram V](mailto:sriramnvks@gmail.com)
+
+GitHub: [https://github.com/darkwebnew](https://github.com/darkwebnew)
