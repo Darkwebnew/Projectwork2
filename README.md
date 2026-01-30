@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧬 Clinical Scan Support System (CSSS)
+# 🧬 Clinical Scan Support System
 
 ### *AI-Powered Medical Image Diagnosis Platform*
 
@@ -24,6 +24,135 @@
 
 **Clinical Scan Support System (CSSS)** is a cutting-edge, AI-powered medical imaging platform that revolutionizes diagnostic workflows by automatically analyzing radiological scans, detecting diseases, and generating secure medical reports. Built with state-of-the-art deep learning and enterprise-grade security, CSSS assists healthcare professionals in making faster, more accurate diagnostic decisions.
 
+### 📂 Folder Structure
+Below is the complete project folder structure for reference:
+
+🧬 **CLINICAL-SCAN-SUPPORT-SYSTEM/**  
+│  
+├── 🔑 **.env**                         — Environment secrets (email, encryption keys, API tokens)  
+├── 🖥️ **app.py**                        — Main Streamlit application entry point  
+├── 📖 **README.md**                     — Complete project documentation  
+├── 📦 **requirements.txt**              — Python dependency list  
+├── 📦 **requirements_streamlit.txt**    — Streamlit-specific packages  
+├── 🧪 **validate_project.py**           — System health & integrity validation script  
+├── 🗂️ **split_lung_dataset.py**         — Dataset splitting automation  
+├── 🏋️ **train_lung_model.py**          — Model training pipeline  
+├── 📜 **CHANGELOG.md**                  — Version history and release notes  
+├── ⚖️ **LICENSE**                       — Open-source license file  
+│  
+├── 🗂️ **.github/**                      — GitHub automation  
+│   └── 🤖 **workflows/**  
+│       └── ✅ **ci.yml**                 — Continuous Integration (automated tests)  
+│  
+├── 📚 **docs/**                          — Technical documentation  
+│   ├── 🧭 **architecture.md**           — System architecture design  
+│   ├── 🔐 **security.md**               — Security design & compliance  
+│   ├── 🤖 **ai_pipeline.md**            — ML training & inference pipeline  
+│   ├── 📊 **datasets.md**               — Dataset sources and statistics  
+│   └── 🚀 **deployment.md**            — Deployment guide  
+│  
+├── 📊 **reports/**                        — Generated medical reports  
+│   ├── 🔒 **encrypted/**                — Final encrypted PDF reports  
+│   └── 🕒 **temp/**                      — Temporary PDF staging files  
+│  
+├── 📤 **uploads/**                        — User uploaded medical images  
+│   ├── 🧑 **patient_scans/**            — Raw patient uploads  
+│   ├── 🧪 **preprocessed/**             — Cleaned & resized images  
+│   └── 🗃️ **rejected/**                 — Invalid / corrupted scans  
+│  
+├── 🗄️ **database/**                      — Structured databases  
+│   ├── 💾 **users.db**                  — Login credentials & roles  
+│   ├── 🫁 **patients.db**               — Patient profiles & approvals  
+│   ├── 📄 **reports.db**                 — Report metadata  
+│   └── 🧾 **audit_logs.db**             — Security & activity logs  
+│  
+├── 📂 **Dataset/**                        — Training datasets  
+│   ├── 🩻 **chest_xray_nih/**           — NIH Chest X-ray Dataset  
+│   │   ├── images_001/ … images_012/  
+│   │   ➤ Total Images ≈ 112,120  
+│   ├── 🦠 **covid_xray/**               — COVID-19 Radiography Dataset  
+│   │   ├── COVID/  
+│   │   ├── Lung_Opacity/  
+│   │   ├── Normal/  
+│   │   └── Viral_Pneumonia/  
+│   │   ➤ Total Images ≈ 42,330  
+│   ├── 🫀 **heart_mri/**                — Cardiac MRI Dataset  
+│   │   ├── Normal/  
+│   │   └── Sick/  
+│   │   ➤ Total Images ≈ 63,425  
+│   └── 🫁 **lung/**                      — Processed Lung Dataset (Split)  
+│       ├── 🏋️ **train/**  
+│       ├── 📊 **val/**  
+│       ├── 🧪 **test/**  
+│       └── 📄 **dataset_split_log_20260124.txt**  
+│       └── 📑 **dataset_metadata.json** — Auto-generated dataset stats & labels  
+│  
+├── 🧩 **src/**                            — Core source code  
+│   ├── 🔐 **security/**                  — Authentication & data protection  
+│   │   ├── 🛡️ **auth.py**               — Login + session handling  
+│   │   ├── 🔑 **two_factor.py**          — Admin 2FA validation  
+│   │   ├── 🔏 **crypto.py**             — PDF encryption engine  
+│   │   ├── 🚦 **access_control.py**      — Role permissions  
+│   │   └── 📜 **logger.py**              — Secure audit logging  
+│   │  
+│   ├── 🤖 **ai/**                        — Artificial Intelligence layer  
+│   │   ├── 🧠 **predictor.py**           — Disease prediction engine  
+│   │   ├── 🧹 **preprocessor.py**       — Image normalization & resizing  
+│   │   ├── 💬 **chatbot.py**            — Medical AI assistant  
+│   │   ├── 🔍 **explainability.py**     — Heatmaps / confidence analysis  
+│   │   └── 📦 **artifacts/**            — ML assets  
+│   │       ├── 🧬 **models/**            — Trained neural networks  
+│   │       ├── 📈 **metrics/**           — Accuracy, loss, evaluation  
+│   │       ├── 🏷️ **labels/**           — Class mappings  
+│   │       └── 🖼️ **plots/**             — Training graphs & confusion matrices  
+│   │  
+│   ├── 🗄️ **database/**                  — Database abstraction layer  
+│   │   ├── 👤 **user_db.py**             — User CRUD operations  
+│   │   ├── 🧑‍⚕️ **patient_db.py**       — Patient records  
+│   │   ├── 📑 **report_db.py**           — Reports tracking  
+│   │   └── 🩻 **scan_db.py**             — Scan metadata  
+│   │  
+│   ├── 📄 **services/**                   — Business services  
+│   │   ├── 🧾 **pdf_service.py**         — Professional PDF generator  
+│   │   ├── 📧 **mail_service.py**        — Email automation  
+│   │   ├── 📱 **whatsapp_service.py**    — WhatsApp delivery  
+│   │   ├── 🔔 **notification_manager.py** — Unified messaging  
+│   │   └── 🗃️ **storage_service.py**    — File management  
+│   │  
+│   ├── 🎨 **ui/**                         — User interface modules  
+│   │   ├── 👨‍💼 **admin_ui.py**         — Admin dashboard  
+│   │   ├── 👨‍⚕️ **doctor_ui.py**        — Doctor dashboard  
+│   │   ├── 🧑 **patient_ui.py**          — Patient dashboard  
+│   │   ├── 💬 **chatbot_ui.py**          — Chatbot panel  
+│   │   └── 🔐 **auth_ui.py**             — Login & signup screens  
+│   │  
+│   ├── 🛠️ **utils/**                     — Utility helpers  
+│   │   ├── 🌿 **env_loader.py**          — Load environment variables  
+│   │   ├── 📂 **file_utils.py**          — File validation  
+│   │   ├── 🧪 **validators.py**         — Data validation  
+│   │   ├── ⏱️ **time_utils.py**         — Timestamp utilities  
+│   │   └── 📊 **analytics.py**          — Usage metrics  
+│   │  
+│   └── 🧪 **tests/**                     — Automated tests  
+│       ├── 🔬 **test_auth.py**  
+│       ├── 🧪 **test_ai.py**  
+│       ├── 📄 **test_pdf.py**  
+│       └── 📡 **test_notifications.py**  
+│  
+├── 🎨 **assets/**                        — Visual assets  
+│   ├── 🏥 **logo.png**  
+│   ├── 📄 **report_template.html**  
+│   ├── 🎨 **styles.css**  
+│   ├── 🧭 **architecture_diagram.png**  
+│   ├── 🧠 **ai_pipeline.png**  
+│   └── 🖥️ **dashboard_mockups.png**  
+│  
+└── 🚀 **deployment/**                     — Deployment configuration  
+    ├── 🐳 **Dockerfile**  
+    ├── ☁️ **streamlit_cloud.yaml**  
+    ├── 🔐 **nginx.conf**  
+    └── 📜 **deploy_guide.md**
+
 ### ✨ Key Features
 
 🔍 **Multi-Modal Image Analysis** - Support for chest X-rays, COVID-19 radiography, cardiac MRI, and lung CT scans  
@@ -35,6 +164,17 @@
 🎛️ **Role-Based Dashboards** - Specialized interfaces for Admin, Doctor, and Patient workflows  
 🚀 **Production-Ready** - Docker containerization with Streamlit Cloud deployment support  
 🛠️ **Developer-Friendly** - Comprehensive API, CLI tools, and extensive documentation
+
+### 👥 Team Members
+
+| Name                     | Role         | GitHub                                                                       |
+| ------------------------ | ------------ | ---------------------------------------------------------------------------- |
+| **Sriram V**             | Project Lead | [https://github.com/darkwebnew](https://github.com/darkwebnew)               |
+| **Swedha V**             | Mentor       | [https://github.com/swedha333](https://github.com/swedha333)                 |
+| **Selvakumar R**         | Co-Mentor    | [https://github.com/selvasachein](https://github.com/selvasachein)           |
+| **Surothaaman R**        | Contributor  | [https://github.com/surothaaman](https://github.com/surothaaman)             |
+| **Andrew Varhese V S** | Contributor  | [https://github.com/Andrewvarghese653](https://github.com/Andrewvarghese653) |
+| **Praveen CK**           | Contributor  | [https://github.com/praveenck23009864](https://github.com/praveenck23009864) |
 
 ### 🎯 Use Cases
 
