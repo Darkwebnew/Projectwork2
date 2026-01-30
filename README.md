@@ -22,7 +22,7 @@
 
 ## 🎯 Overview
 
-**Clinical Scan Support System (CSSS)** is a cutting-edge, AI-powered medical imaging platform that revolutionizes diagnostic workflows by automatically analyzing radiological scans, detecting diseases, and generating secure medical reports. Built with state-of-the-art deep learning and enterprise-grade security, CSSS assists healthcare professionals in making faster, more accurate diagnostic decisions.
+**Clinical Scan Support System** is a cutting-edge, AI-powered medical imaging platform that revolutionizes diagnostic workflows by automatically analyzing radiological scans, detecting diseases, and generating secure medical reports. Built with state-of-the-art deep learning and enterprise-grade security, CSSS assists healthcare professionals in making faster, more accurate diagnostic decisions.
 
 ### 📂 Folder Structure
 **Below is the complete project folder structure for reference:**
