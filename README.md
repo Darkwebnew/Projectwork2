@@ -84,7 +84,7 @@ Streamlit deployment with GPU-ready training.
 ## 🏗️ System Architecture
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/placeholder/clinical_architecture.png" width="900"/>
+<img src="img/architecture_diagram.png" width="900"/>
 </div>
 
 ### 🔧 Architecture Flow
@@ -273,9 +273,17 @@ This project is licensed under the MIT License - see [LICENSE](https://github.co
 
 ## 📸 Screenshots
 
-| Dashboard                                                                         | AI Prediction                                                                       | PDF Report                                                                   |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| ![Dashboard](https://user-images.githubusercontent.com/placeholder/dashboard.png) | ![Prediction](https://user-images.githubusercontent.com/placeholder/prediction.png) | ![PDF Report](https://user-images.githubusercontent.com/placeholder/pdf.png) |
+| Doctor Dashboard | Admin Dashboard | Patient Dashboard |
+| ---------------- | --------------- | ---------------- |
+| <img src="img/dashboard_doctor.png" width="400"/> | <img src="img/dashboard_admin.png" width="400"/> | <img src="img/dashboard_patient.png" width="400"/> |
+
+| Chatbot Panel | AI Pipeline | Workflow Diagram |
+| ------------- | ----------- | ---------------- |
+| <img src="img/dashboard_chatbot.png" width="400"/> | <img src="img/ai_pipeline.png" width="400"/> | <img src="img/workflow_diagram.png" width="400"/> |
+
+| System Architecture | Security Diagram | Confusion & Training |
+| ------------------ | ---------------- | ------------------ |
+| <img src="img/architecture_diagram.png" width="400"/> | <img src="img/security_diagram.png" width="400"/> | <img src="img/confusion_matrix.png" width="400"/> <br> <img src="img/training_curve.png" width="400"/> |
 
 ---
 
