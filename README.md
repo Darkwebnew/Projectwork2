@@ -1,51 +1,79 @@
 <div align="center">
 
 # 🧬 CLINICAL SCAN SUPPORT SYSTEM  
-
 ### AI-Powered Medical Image Diagnosis & Clinical Decision Support Platform
 
-Secure, intelligent, and automated lung disease diagnosis using deep learning
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
+[![AI](https://img.shields.io/badge/AI-TensorFlow%20%7C%20Keras-orange.svg)](https://www.tensorflow.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Ready-brightgreen.svg)](https://streamlit.io/)
 
-🚀 **Quick Start** • 🏗️ **Architecture** • 🧠 **AI Model** • 🔐 **Security** • 📊 **Results**
+**Secure, intelligent, and automated lung disease diagnosis from Chest X-ray and CT scan images using deep learning.**
+
+[🚀 Quick Start](#-installation) • [🏗️ Architecture](#-system-architecture) • [🧠 AI Model](#-ai-model) • [🔐 Security](#-security) • [📊 Results](#-evaluation--results)
 
 </div>
 
 ---
 
-## 🎯 Overview
+## 🌟 Project Overview
 
-**Clinical Scan Support System (CSSS)** is a full-stack AI healthcare platform designed to assist doctors in diagnosing lung diseases from **Chest X-ray and CT scan images** using deep learning.
+**Clinical Scan Support System (CSSS)** is a full-stack AI healthcare platform that assists doctors in diagnosing lung diseases. It integrates AI-based image analysis, secure doctor login, encrypted PDF report generation, patient history management, and cloud-ready deployment.
 
-The system enables:
-- Secure doctor authentication  
-- Medical image upload  
-- AI-based disease prediction  
-- Encrypted PDF medical report generation  
-- Patient history management  
-- Cloud-ready deployment  
+### 🎯 Why CSSS?
 
-This project demonstrates **real-world AI integration in healthcare**, following industry-level security, modular architecture, and deployment practices.
+- Traditional methods are slow and error-prone. CSSS provides **automated, reliable, and secure AI-driven diagnosis**.  
+- Modular architecture allows **scalable hospital deployment**.  
+- Combines **AI + Security + Healthcare compliance**, ideal for **academic, research, and real-world use**.
 
 ---
 
 ## ✨ Key Features
 
-- 🧠 **AI-Powered Diagnosis** – Deep learning based lung disease detection  
-- 🩺 **Doctor-Only Secure Login** – SHA-256 based authentication  
-- 📤 **Medical Image Upload** – X-ray / CT scan support  
-- 📊 **Confidence Score Display** – Transparent AI predictions  
-- 📄 **Auto PDF Medical Reports** – Professionally generated reports  
-- 🔐 **Encrypted Report Storage** – AES / Fernet encryption  
-- 🗂️ **Patient History Database** – SQLite backed secure storage  
-- 💬 **Medical AI Chatbot** – Doctor assistance module  
-- 🚀 **Production-Ready** – Streamlit deployment, GPU-ready training  
+<table>
+<tr>
+<td width="50%">
+
+### 🧠 AI-Powered Diagnosis
+Deep learning models (MobileNetV2) detect lung diseases in X-ray and CT scans.
+
+### 🩺 Doctor-Only Secure Login
+SHA-256 based authentication for doctors ensures patient data privacy.
+
+### 📤 Medical Image Upload
+Supports X-ray and CT images with preprocessing and normalization.
+
+### 📊 Confidence Score Display
+Transparent AI predictions with probability metrics.
+
+</td>
+<td width="50%">
+
+### 📄 Auto PDF Medical Reports
+Professional reports are generated automatically for each patient.
+
+### 🔐 Encrypted Report Storage
+AES / Fernet encryption ensures secure storage and compliance.
+
+### 🗂️ Patient History Database
+Secure SQLite database stores past patient scans and reports.
+
+### 💬 Medical AI Chatbot
+Doctor assistance module for queries and clinical guidance.
+
+### 🚀 Production-Ready
+Streamlit deployment with GPU-ready training.
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 🏥 Supported Lung Diseases
 
 | Class | Description |
-|------|------------|
+|-------|------------|
 | 🟢 Normal | Healthy lung scans |
 | 🦠 Pneumonia | Bacterial / viral pneumonia |
 | 🧪 COVID-19 | COVID-19 lung infection |
@@ -64,7 +92,7 @@ This project demonstrates **real-world AI integration in healthcare**, following
 1. Doctor logs in securely  
 2. Uploads lung scan image  
 3. Image preprocessing & normalization  
-4. Deep learning inference (MobileNetV2)  
+4. Deep learning inference (**MobileNetV2**)  
 5. Disease classification with confidence score  
 6. Encrypted PDF report generation  
 7. Patient data stored securely  
@@ -75,7 +103,7 @@ This project demonstrates **real-world AI integration in healthcare**, following
 ## 🧩 Project Modules
 
 | Module | Description |
-|------|------------|
+|--------|------------|
 | `app.py` | Streamlit frontend & workflow |
 | `predictor.py` | AI inference engine |
 | `auth.py` | Doctor authentication |
@@ -91,7 +119,7 @@ This project demonstrates **real-world AI integration in healthcare**, following
 ## 🧠 AI Model
 
 ### 🔬 Model Architecture
-- Base Model: **MobileNetV2 (Transfer Learning)**
+- Base Model: **MobileNetV2 (Transfer Learning)**  
 - Framework: TensorFlow + Keras  
 - Input Size: 224 × 224 × 3  
 - Optimizer: Adam  
@@ -99,10 +127,10 @@ This project demonstrates **real-world AI integration in healthcare**, following
 - Metrics: Accuracy, Precision, Recall  
 
 ### ⚡ Training Highlights
-- GPU accelerated (CUDA)
-- Data augmentation (rotation, flip, zoom)
-- Large-scale dataset (200k+ images)
-- Robust generalization performance
+- GPU accelerated (CUDA)  
+- Data augmentation (rotation, flip, zoom)  
+- Large-scale dataset (200k+ images)  
+- Robust generalization performance  
 
 ---
 
@@ -138,7 +166,7 @@ This project demonstrates **real-world AI integration in healthcare**, following
 
 ## 🔐 Security
 
-- 🔒 Password hashing using SHA-256  
+- 🔒 SHA-256 password hashing  
 - 🔐 AES / Fernet encrypted PDF reports  
 - 🗂️ Secure SQLite storage  
 - 📜 Audit logging  
@@ -147,17 +175,14 @@ Ensures **patient data privacy** and **medical compliance readiness**.
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Installation
 
 ### 📋 Prerequisites
-- Python 3.8+
-- TensorFlow
-- Streamlit
-- CUDA (optional)
-
-### 🛠️ Installation
 
 ```bash
-git clone https://github.com/yourusername/CLINICAL-SCAN-SUPPORT-SYSTEM.git
-cd CLINICAL-SCAN-SUPPORT-SYSTEM
-pip install -r requirements.txt
+✓ Python 3.8+
+✓ TensorFlow
+✓ Streamlit
+✓ CUDA (optional)
+✓ Git
+```
