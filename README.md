@@ -63,7 +63,7 @@
 ## 🏗️ System Architecture
 
 <div align="center">
-  <img src="assets/architecture_diagram.png" 
+  <img src="img/architecture_diagram.png" 
        alt="Clinical Scan Support System Architecture" 
        width="800">
 </div>
@@ -331,7 +331,7 @@
 ### 🧠 Model Architecture & Training
 
 <div align="center">
-  <img src="assets/ai_pipeline.png" 
+  <img src="img/ai_pipeline.png" 
        alt="AI Model Pipeline" 
        width="700">
 </div>
@@ -373,7 +373,7 @@ ImageDataGenerator(
 ### 📈 Training Results
 
 <div align="center">
-  <img src="assets/training_curve.png" 
+  <img src="img/training_curve.png" 
        alt="Training and Validation Curves" 
        width="600">
 </div>
@@ -385,7 +385,7 @@ ImageDataGenerator(
 - Learning rate reduced 3 times during training
 
 <div align="center">
-  <img src="assets/confusion_matrix.png" 
+  <img src="img/confusion_matrix.png" 
        alt="Confusion Matrix" 
        width="600">
 </div>
@@ -736,7 +736,7 @@ log_activity(
 ### 👨‍💼 Admin Dashboard
 
 <div align="center">
-  <img src="assets/dashboard_admin.png" 
+  <img src="img/dashboard_admin.png" 
        alt="Admin Dashboard" 
        width="700">
 </div>
@@ -785,7 +785,7 @@ if st.session_state['role'] == 'admin':
 ### 👨‍⚕️ Doctor Dashboard
 
 <div align="center">
-  <img src="assets/dashboard_doctor.png" 
+  <img src="img/dashboard_doctor.png" 
        alt="Doctor Dashboard" 
        width="700">
 </div>
@@ -846,7 +846,7 @@ if st.session_state['role'] == 'doctor':
 ### 🧑 Patient Dashboard
 
 <div align="center">
-  <img src="assets/dashboard_patient.png" 
+  <img src="img/dashboard_patient.png" 
        alt="Patient Dashboard" 
        width="700">
 </div>
@@ -897,7 +897,7 @@ if st.session_state['role'] == 'patient':
 ### 💬 AI Medical Assistant (Chatbot)
 
 <div align="center">
-  <img src="assets/dashboard_chatbot.png" 
+  <img src="img/dashboard_chatbot.png" 
        alt="Chatbot Interface" 
        width="700">
 </div>
@@ -948,7 +948,7 @@ st.chat_message("assistant").write(response)
 ### 🛡️ Security Architecture
 
 <div align="center">
-  <img src="assets/security_diagram.png" 
+  <img src="img/security_diagram.png" 
        alt="Security Framework" 
        width="700">
 </div>
@@ -1306,9 +1306,9 @@ MAX_UPLOAD_SIZE_MB=10
 ALLOWED_EXTENSIONS=png,jpg,jpeg,dcm
 
 # Report Generation
-REPORT_TEMPLATE=assets/report_template.html
+REPORT_TEMPLATE=img/report_template.html
 HOSPITAL_NAME=Your Hospital Name
-HOSPITAL_LOGO=assets/logo.png
+HOSPITAL_LOGO=img/logo.png
 ```
 
 </details>
