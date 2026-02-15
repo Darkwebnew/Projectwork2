@@ -158,20 +158,6 @@
 <img src="img/architecture_diagram.png" alt="System Architecture" width="900"/>
 </div>
 
-> **🎨 Gemini ImageFX Prompt** *(regenerate this image)*:
-> ```
-> Professional system architecture diagram on dark navy #0a0f1e background. Title:
-> "Clinical Scan Support System — Architecture". 5 horizontal layers with teal
-> #00c9a7 accent borders: (1) Client Layer: Browser / Mobile with role icons
-> [Admin, Doctor, Patient, Pharmacist]; (2) Frontend: Next.js 14 SPA with
-> components [Navbar, UploadScan, ChatBot, ScanTable, ProtectedRoute]; (3) API:
-> FastAPI REST with routers [/auth, /doctor, /patient, /admin, /pharmacist,
-> /reports, /chatbot, /otp]; (4) Services: AI Service (MobileNetV2 + Grad-CAM),
-> Email Service (SMTP), Security [JWT, OTP, RBAC, Bcrypt]; (5) Data: SQLite
-> Database, lung_model.h5, class_labels.json. White arrows between layers. White
-> sans-serif labels. Professional medical tech aesthetic. 1400x800px.
-> ```
-
 ### Component Summary
 
 | Layer | Technology | Responsibility |
@@ -249,19 +235,6 @@ The FastAPI backend exposes a clean REST API. Visit `/docs` for auto-generated S
 <div align="center">
 <img src="img/ai_pipeline.png" alt="AI Pipeline" width="900"/>
 </div>
-
-> **🎨 Gemini ImageFX Prompt** *(regenerate this image)*:
-> ```
-> Horizontal flowchart on dark navy #0a0f1e background. Title: "AI Inference
-> Pipeline". 7 connected rounded boxes with teal #00c9a7 borders and white text,
-> joined by white right-pointing arrows: [1. Image Upload via API] → [2. Input
-> Validation & Preprocessing (resize 224x224, normalize)] → [3. MobileNetV2
-> Inference (lung_model.h5)] → [4. Softmax Prediction (class probabilities)] →
-> [5. Grad-CAM Heatmap Generation] → [6. PDF Report Build (Jinja2 template)] →
-> [7. Email Delivery (SMTP)]. Small gray subtitle under each step naming the
-> responsible file: ai_service.py, lung_model.h5, report_template.html,
-> email_service.py. Clean professional style. 1400x500px.
-> ```
 
 ### Inference Code (`backend/services/ai_service.py`)
 
@@ -345,8 +318,6 @@ callbacks = [
 
 ## 📊 Performance Metrics
 
-<div align="center">
-
 | Metric | Value |
 |---|---|
 | **Test Accuracy** | 89.76% |
@@ -355,7 +326,6 @@ callbacks = [
 | **Model Size** | ~14 MB (`.h5`) |
 | **Total Training Images** | 217,875 |
 
-</div>
 
 ### Per-Class Accuracy
 
@@ -371,24 +341,6 @@ callbacks = [
 &nbsp;&nbsp;
 <img src="img/training_curve.png" alt="Training Curves" width="480"/>
 </div>
-
-> **🎨 Gemini Prompt — Confusion Matrix**:
-> ```
-> 4x4 confusion matrix heatmap on dark navy #0a0f1e background. Classes:
-> Normal, Pneumonia, COVID-19, Lung Opacity. Teal-to-white color gradient —
-> high values (correct predictions) in bright teal #00c9a7, low values dark.
-> White cell labels with counts. Title: "Confusion Matrix — CSSS Lung Disease
-> Classifier". X-axis: Predicted, Y-axis: Actual. White axis labels. 700x600px.
-> ```
-
-> **🎨 Gemini Prompt — Training Curves**:
-> ```
-> Two side-by-side line charts on dark navy #0a0f1e background. Left: "Accuracy"
-> — teal #00c9a7 solid line (train) + white dashed line (val), rising from 0.6
-> to 0.91 over 30 epochs. Right: "Loss" — teal solid + white dashed, falling
-> from 1.2 to 0.28. Legend: Train vs Validation. Title: "Model Training History".
-> White axis labels and gridlines. 1200x500px.
-> ```
 
 ---
 
@@ -426,26 +378,6 @@ callbacks = [
 <td align="center"><img src="img/dashboard_chatbot.png" width="380"/><br/><b>AI Chatbot</b><br/><sub>Context-aware medical Q&A assistant</sub></td>
 </tr>
 </table>
-
-> **🎨 Gemini Prompt — Admin Dashboard**:
-> ```
-> Browser UI mockup on dark navy #0a0f1e background. Title: "CSSS — Admin
-> Dashboard". Top: 4 stat cards with teal borders — Total Users (342), Scans
-> Today (28), Active Doctors (15), Reports Generated (1,204). Left panel: user
-> data table [Name, Email, Role, Status (Active/Disabled), Actions (Edit/Delete)]
-> alternating dark rows. Right panel: bar chart "Weekly Scan Volume" in teal.
-> Bottom: "Recent Audit Log" table. White labels, 1400x800px.
-> ```
-
-> **🎨 Gemini Prompt — Doctor Dashboard**:
-> ```
-> Browser UI mockup on dark navy #0a0f1e background. Title: "CSSS — Doctor
-> Dashboard". Left sidebar: patient list with names and dates. Center: drag-
-> and-drop scan upload zone with dashed teal border and upload icon. Below: AI
-> prediction card showing "Pneumonia — 88.4% confidence" with probability bars
-> for all 4 classes and a Grad-CAM heatmap image with colored hotspots. Bottom:
-> "Generate Report" and "Email to Patient" teal buttons. 1400x800px.
-> ```
 
 ---
 
@@ -748,7 +680,7 @@ This project is licensed under the **MIT License** — see [`LICENSE.txt`](LICEN
 
 | Channel | Link |
 |---|---|
-| 📧 **Email** | your-email@example.com |
+| 📧 **Email** | sriramnvks@gmail.com |
 | 🐛 **Bug Reports** | [GitHub Issues](https://github.com/Darkwebnew/Projectwork2/issues) |
 | 💬 **Discussions** | [GitHub Discussions](https://github.com/Darkwebnew/Projectwork2/discussions) |
 | 📖 **API Docs** | `http://localhost:8000/docs` (Swagger UI) |
