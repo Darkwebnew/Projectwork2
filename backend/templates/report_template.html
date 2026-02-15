@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clinical Scan Support System - Diagnostic Report</title>
+<style>
+
+  /* ── Reset & base ───────────────────────────────────────── */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #1a1a2e;
+    background: #fff;
+    padding: 30px;
+  }
+
+  /* ── Report wrapper ─────────────────────────────────────── */
+  .report-container {
+    max-width: 860px;
+    margin: auto;
+    background: #fff;
+    border: 1px solid #d0d7e3;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.10);
+  }
+
+  /* ── Header ─────────────────────────────────────────────── */
+  .report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+    color: #fff;
+    padding: 28px 30px 22px;
+  }
+
+  .hospital-info h1 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #e0f2fe;
+    margin-bottom: 5px;
+  }
+
+  .hospital-info p {
+    font-size: 12px;
+    color: #94a3b8;
+    line-height: 1.8;
+  }
+
+  .report-meta {
+    text-align: right;
+  }
+
+  .report-meta h2 {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #38bdf8;
+    border: 2px solid #38bdf8;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  .report-meta p {
+    font-size: 12px;
+    color: #cbd5e1;
+    line-height: 1.8;
+  }
+
+  /* ── Divider ─────────────────────────────────────────────── */
+  .divider {
+    height: 3px;
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9, #2563eb);
+  }
+
+  /* ── Body padding ────────────────────────────────────────── */
+  .report-body {
+    padding: 0 30px 30px;
+  }
+
+  /* ── Section ─────────────────────────────────────────────── */
+  .section {
+    margin-top: 22px;
+  }
+
+  .section h3 {
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(90deg, #1e3a5f, #0f3460);
+    padding: 7px 14px;
+    border-radius: 5px;
+    border-left: 4px solid #38bdf8;
+    margin-bottom: 12px;
+  }
+
+  /* ── 2-column grid ───────────────────────────────────────── */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 24px;
+  }
+
+  .grid div {
+    font-size: 12.5px;
+    color: #334155;
+    padding: 5px 0;
+    border-bottom: 1px dashed #e2e8f0;
+  }
+
+  .grid div strong {
+    color: #1e293b;
+    font-weight: 600;
+    min-width: 130px;
+    display: inline-block;
+  }
+
+  /* ── Prediction badge ────────────────────────────────────── */
+  .badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  .badge-normal {
+    background: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #86efac;
+  }
+
+  .badge-abnormal {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+  }
+
+  /* ── Findings / impression / recommendations ─────────────── */
+  .section p,
+  .section ul {
+    font-size: 13px;
+    color: #374151;
+    line-height: 1.75;
+    padding: 0 4px;
+  }
+
+  .section ul {
+    padding-left: 22px;
+  }
+
+  .section ul li {
+    margin-bottom: 5px;
+  }
+
+  /* ── Scan image ──────────────────────────────────────────── */
+  .image-box {
+    text-align: center;
+    margin-top: 10px;
+    padding: 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+  }
+
+  .image-box img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    object-fit: contain;
+  }
+
+  .image-box .no-image {
+    color: #94a3b8;
+    font-style: italic;
+    font-size: 12px;
+    padding: 30px 0;
+  }
+
+  /* ── Signature ───────────────────────────────────────────── */
+  .signature {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .signature-block {
+    text-align: center;
+    min-width: 180px;
+  }
+
+  .signature-block .sig-line {
+    border-top: 2px solid #1e3a5f;
+    margin-bottom: 8px;
+    margin-top: 40px; /* space for actual signature */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .signature-block p {
+    font-size: 12.5px;
+    color: #374151;
+    line-height: 1.7;
+  }
+
+  .signature-block strong {
+    font-size: 13px;
+    color: #1e293b;
+  }
+
+  /* ── Footer ──────────────────────────────────────────────── */
+  .report-footer {
+    background: #f1f5f9;
+    border-top: 2px solid #e2e8f0;
+    padding: 14px 30px;
+    text-align: center;
+  }
+
+  .report-footer p {
+    font-size: 11px;
+    color: #64748b;
+    line-height: 1.7;
+  }
+
+  /* ── Watermark (compliance) ──────────────────────────────── */
+  .ai-notice {
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    border-radius: 6px;
+    padding: 8px 14px;
+    margin-top: 14px;
+    font-size: 11.5px;
+    color: #854d0e;
+  }
+
+  @media print {
+    body { padding: 0; }
+    .report-container { border: none; box-shadow: none; }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="report-container">
+
+  <!-- ── HEADER ─────────────────────────────────────────────── -->
+  <header class="report-header">
+    <div class="hospital-info">
+      <h1>Clinical Scan Support System</h1>
+      <p>AI-Powered Medical Imaging Diagnosis Platform</p>
+      <p>Medical Innovation Lab, India</p>
+      <p>Phone: +91 XXXXX XXXXX &nbsp;|&nbsp; Email: clinicalscan@ai.com</p>
+    </div>
+    <div class="report-meta">
+      <h2>DIAGNOSTIC REPORT</h2>
+      <p><strong>Report ID:</strong> CSS-{{ report_id }}</p>
+      <p><strong>Date:</strong> {{ report_date }}</p>
+      <p><strong>Time:</strong> {{ report_time }}</p>
+    </div>
+  </header>
+
+  <div class="divider"></div>
+
+  <div class="report-body">
+
+    <!-- ── PATIENT INFORMATION ─────────────────────────────── -->
+    <section class="section">
+      <h3>Patient Information</h3>
+      <div class="grid">
+        <div><strong>Patient Name:</strong> {{ patient_name }}</div>
+        <div><strong>Patient ID:</strong> P-{{ patient_id }}</div>
+
+        <div><strong>Age:</strong> {{ age }}</div>
+        <div><strong>Gender:</strong> {{ gender }}</div>
+
+        <div><strong>Date of Birth:</strong> {{ dob }}</div>
+        <div><strong>Blood Group:</strong> {{ blood_group }}</div>
+
+        <div><strong>Phone:</strong> {{ phone }}</div>
+        <div><strong>Email:</strong> {{ email }}</div>
+
+        <div><strong>Address:</strong> {{ address }}</div>
+        <div><strong>Emergency Contact:</strong> {{ emergency_contact }}</div>
+      </div>
+    </section>
+
+    <!-- ── REFERRAL DETAILS ────────────────────────────────── -->
+    <section class="section">
+      <h3>Referral Details</h3>
+      <div class="grid">
+        <div><strong>Referring Doctor:</strong> {{ referring_doctor }}</div>
+        <div><strong>Department:</strong> {{ department }}</div>
+
+        <div><strong>Hospital:</strong> {{ hospital }}</div>
+        <div><strong>Clinical Indication:</strong> {{ clinical_indication }}</div>
+
+        <div><strong>Priority:</strong> {{ priority }}</div>
+        <div><strong>Insurance:</strong> {{ insurance }}</div>
+      </div>
+    </section>
+
+    <!-- ── SCAN INFORMATION ────────────────────────────────── -->
+    <section class="section">
+      <h3>Scan Information</h3>
+      <div class="grid">
+        <div><strong>Scan Type:</strong> {{ scan_type }}</div>
+        <div><strong>Body Part:</strong> {{ body_part }}</div>
+
+        <div><strong>Scan Date:</strong> {{ scan_date }}</div>
+        <div><strong>Scan Time:</strong> {{ scan_time }}</div>
+
+        <div><strong>Machine:</strong> {{ machine }}</div>
+        <div><strong>Technician:</strong> {{ technician }}</div>
+
+        <div><strong>Contrast Used:</strong> {{ contrast_used }}</div>
+        <div><strong>Scan Quality:</strong> {{ scan_quality }}</div>
+      </div>
+    </section>
+
+    <!-- ── AI ANALYSIS RESULTS ─────────────────────────────── -->
+    <section class="section">
+      <h3>AI Analysis Results</h3>
+      <div class="grid">
+        <div><strong>AI Model:</strong> {{ ai_model }}</div>
+        <div><strong>Version:</strong> {{ ai_version }}</div>
+
+        <div>
+          <strong>Prediction:</strong>
+          {% if prediction == "Normal" %}
+            <span class="badge badge-normal">{{ prediction }}</span>
+          {% else %}
+            <span class="badge badge-abnormal">{{ prediction }}</span>
+          {% endif %}
+        </div>
+        <div><strong>Confidence Score:</strong> {{ confidence }}%</div>
+
+        <div><strong>Risk Level:</strong> {{ risk_level }}</div>
+        <div><strong>Processing Time:</strong> {{ processing_time }}</div>
+      </div>
+    </section>
+
+    <!-- ── FINDINGS ────────────────────────────────────────── -->
+    <section class="section">
+      <h3>Findings</h3>
+      <p>{{ doctor_notes }}</p>
+    </section>
+
+    <!-- ── IMPRESSION ──────────────────────────────────────── -->
+    <section class="section">
+      <h3>Impression</h3>
+      <p>{{ impression }}</p>
+    </section>
+
+    <!-- ── RECOMMENDATIONS ────────────────────────────────── -->
+    <section class="section">
+      <h3>Recommendations</h3>
+      <ul>
+        {% for rec in recommendations %}
+          <li>{{ rec }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <!-- ── PRESCRIPTION ────────────────────────────────────── -->
+    {% if prescription %}
+    <section class="section">
+      <h3>Prescription / Pharmacist Notes</h3>
+      <p>{{ prescription }}</p>
+    </section>
+    {% endif %}
+
+    <!-- ── SCAN IMAGE ──────────────────────────────────────── -->
+    <section class="section">
+      <h3>Scan Image</h3>
+      <div class="image-box">
+        {% if scan_image_base64 %}
+          <img src="data:image/png;base64,{{ scan_image_base64 }}" alt="Scan Image">
+        {% else %}
+          <div class="no-image">Scan image not available for this report.</div>
+        {% endif %}
+      </div>
+    </section>
+
+    <!-- ── AI NOTICE ───────────────────────────────────────── -->
+    <div class="ai-notice">
+      ⚠️ This report was generated with AI assistance and has been reviewed and approved by a qualified medical professional before release.
+    </div>
+
+    <!-- ── SIGNATURES ──────────────────────────────────────── -->
+    <div class="signature">
+      <div class="signature-block">
+        <div class="sig-line"></div>
+        <strong>Radiologist / Doctor</strong>
+        <p>{{ doctor_name }}</p>
+        <p>{{ doctor_qualification }}</p>
+      </div>
+      <div class="signature-block">
+        <div class="sig-line"></div>
+        <strong>Pharmacist</strong>
+        <p>{{ pharmacist_name }}</p>
+        <p>Registered Pharmacist</p>
+      </div>
+      <div class="signature-block">
+        <div class="sig-line"></div>
+        <strong>AI System</strong>
+        <p>Clinical Scan Support System</p>
+        <p>{{ ai_version }}</p>
+      </div>
+    </div>
+
+  </div><!-- /report-body -->
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="report-footer">
+    <p>This report is generated using AI and must be reviewed by a qualified medical professional before clinical use.</p>
+    <p>Report generated on {{ report_date }} at {{ report_time }} &nbsp;|&nbsp; Scan ID: {{ scan_id }} &nbsp;|&nbsp; © 2026 Clinical Scan Support System</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
