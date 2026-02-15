@@ -8,7 +8,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
 [![Next.js](https://img.shields.io/badge/Next.js-14+-black?logo=next.js)](https://nextjs.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?logo=tensorflow)](https://www.tensorflow.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary%20%C2%A9%202026-red.svg)](LICENSE.txt)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](test_report.pdf)
 [![HIPAA](https://img.shields.io/badge/HIPAA-Compliant-blue.svg)](#-security--compliance)
 [![Accuracy](https://img.shields.io/badge/accuracy-89.76%25-success.svg)](#-performance-metrics)
