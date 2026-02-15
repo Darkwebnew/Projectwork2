@@ -336,9 +336,11 @@ callbacks = [
 | COVID-19 | 91.7% | 90.3% | 91.0% |
 | Lung Opacity | 86.2% | 87.5% | 86.8% |
 
-<div align="center">
+<div align="left">
+    
 <img src="img/confusion_matrix.png" alt="Confusion Matrix" width="480"/>
 &nbsp;&nbsp;
+
 <img src="img/training_curve.png" alt="Training Curves" width="480"/>
 </div>
 
