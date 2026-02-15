@@ -706,12 +706,12 @@ git push origin feature/your-feature-name
 
 | Name | Role | GitHub |
 |---|---|---|
-| **Gowri Ganesh N S** | Project Lead & ML Engineer | [@gowriganeshns](https://github.com/gowriganeshns) |
-| Team Member 2 | Backend Developer | [@username](https://github.com/) |
-| Team Member 3 | Frontend Developer | [@username](https://github.com/) |
-| Team Member 4 | Security & DevOps | [@username](https://github.com/) |
-| Team Member 5 | Data & Training | [@username](https://github.com/) |
-| Team Member 6 | QA & Documentation | [@username](https://github.com/) |
+| **Sriram V** | Lead Developer & AI/ML Engineer | [@Darkwebnew](https://github.com/Darkwebnew) |
+| **Surothaaman R** | Backend Development & Security | [@surothaaman](https://github.com/surothaaman) |
+| **V. S. Andrew Varghese** | Frontend Development | [@Andrewvarghese653](https://github.com/Andrewvarghese653) |
+| **Praveen CK** | Database & Testing | [@praveenck23009864](https://github.com/praveenck23009864) |
+| **Dr. Swedha V** | Medical Domain Expertise | [@swedha333](https://github.com/swedha333) |
+| **Dr. Selvakumar R** | AI/ML Advisor | [@selvasachein](https://github.com/selvasachein) |
 
 ---
 
