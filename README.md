@@ -670,7 +670,12 @@ git push origin feature/your-feature-name
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see [`LICENSE.txt`](LICENSE.txt) for details.
+This project is **proprietary software**. All rights reserved by the authors.
+
+> ⚠️ Unauthorized copying, distribution, or use of this software is strictly
+> prohibited and may result in legal action under the **Indian Copyright Act, 1957**.
+
+See [`LICENSE.txt`](LICENSE.txt) for full terms.
 
 ---
 
