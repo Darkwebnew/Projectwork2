@@ -341,6 +341,7 @@ callbacks = [
 <img src="img/confusion_matrix.png" alt="Confusion Matrix" width="480"/>
 &nbsp;&nbsp;
 
+
 <img src="img/training_curve.png" alt="Training Curves" width="480"/>
 </div>
 
