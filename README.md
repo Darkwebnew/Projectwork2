@@ -1,25 +1,28 @@
 <div align="center">
 
+<img src="img/banner.png" alt="CSSS Banner" width="100%"/>
+
 # 🧬 Clinical Scan Support System
 
-### *AI-Powered Medical Image Diagnosis Platform*
+### *AI-Powered Medical Image Diagnosis & Automated Clinical Reporting Platform*
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
-[![Next.js](https://img.shields.io/badge/Next.js-14+-black?logo=next.js)](https://nextjs.org/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?logo=tensorflow)](https://www.tensorflow.org/)
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary%20%C2%A9%202026-red.svg)](LICENSE.txt)
-[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](test_report.pdf)
-[![HIPAA](https://img.shields.io/badge/HIPAA-Compliant-blue.svg)](#-security--compliance)
-[![Accuracy](https://img.shields.io/badge/accuracy-89.76%25-success.svg)](#-performance-metrics)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-14+-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?style=flat&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
+[![MobileNetV2](https://img.shields.io/badge/Model-MobileNetV2-blueviolet?style=flat)](https://arxiv.org/abs/1801.04381)
+[![Accuracy](https://img.shields.io/badge/Test_Accuracy-89.51%25-brightgreen?style=flat)](models/metrics/training_metrics.json)
+[![Dataset](https://img.shields.io/badge/Dataset-217%2C875_Images-informational?style=flat)](https://www.kaggle.com/)
+[![License](https://img.shields.io/badge/License-Proprietary_%C2%A9_2026-red?style=flat)](LICENSE.txt)
+[![Status](https://img.shields.io/badge/Status-Production_Ready-success?style=flat)]()
 
-*Automated multi-modal disease detection, explainable AI diagnostics, and secure encrypted reporting*
+*From scan upload → AI inference → multi-role clinical review → encrypted PDF report delivery — fully automated in one platform*
 
-[🚀 Quick Start](#-quick-start) • [🏗️ Architecture](#️-system-architecture) • [🧠 AI Pipeline](#-ml-pipeline--workflow) • [🛠️ Installation](#️-installation) • [🧪 Testing](#-testing) • [📞 Contact](#-contact--support)
+[🚀 Quick Start](#-quick-start) • [🏗️ Architecture](#️-system-architecture) • [🧠 AI Pipeline](#-ai-model--pipeline) • [🔌 API Docs](#-api-endpoints) • [🧪 Workflow Demo](#-end-to-end-workflow-demo) • [👥 Team](#-team)
 
 ---
 
-> ⚕️ **Disclaimer**: CSSS is an AI-assisted screening tool. All predictions are intended to **assist** qualified medical professionals — not replace clinical judgment. Always consult a licensed physician for diagnosis and treatment.
+> **⚕️ Medical Disclaimer** — CSSS is an AI-assisted screening tool designed to **support** qualified medical professionals. All AI predictions require review by a licensed physician before any clinical decision is made.
 
 </div>
 
@@ -27,443 +30,460 @@
 
 ## 🎯 Overview
 
-**Clinical Scan Support System (CSSS)** is a production-ready, full-stack AI medical imaging platform that automates the end-to-end diagnostic workflow — from scan upload to encrypted report delivery. Built with a **FastAPI** backend, **Next.js** frontend, and a fine-tuned **MobileNetV2** deep learning model, CSSS provides healthcare professionals with real-time AI-assisted screening across chest X-rays, COVID-19 radiographs, and cardiac MRI scans.
+**Clinical Scan Support System (CSSS)** is a production-grade, full-stack AI medical imaging platform that automates the complete diagnostic pipeline — from patient scan upload through real-time MobileNetV2 inference, structured multi-role clinical review, to professional PDF diagnostic report generation and encrypted email delivery.
+
+Built as a final-year engineering mini-project, CSSS tackles a real clinical bottleneck: traditional diagnostic workflows are manual, siloed, and slow. CSSS replaces this with a unified platform where every stakeholder — patient, doctor, pharmacist, and admin — has a purpose-built dashboard, enforced access control, and a clearly defined role in the pipeline.
 
 ### ✨ Key Features
 
-| Feature | Description |
+| Feature | Detail |
 |---|---|
-| 🔍 **Multi-Modal Imaging** | Chest X-ray, COVID-19 radiography, cardiac MRI, lung CT |
-| 🧠 **Deep Learning AI** | MobileNetV2-based model with 89.76% test accuracy |
-| ⚡ **Real-time Inference** | Sub-second prediction with confidence scoring |
-| 🗺️ **Explainable AI** | Grad-CAM heatmap overlays for transparent predictions |
-| 🔒 **Enterprise Security** | AES-256 PDF encryption, JWT auth, OTP 2FA, RBAC |
-| 📊 **Smart Reporting** | Auto-generated professional PDF with digital watermarking |
-| 📧 **Multi-Channel Delivery** | Email report delivery via SMTP integration |
-| 🎛️ **Role Dashboards** | Tailored UIs for Admin, Doctor, Patient, and Pharmacist roles |
-| 💬 **AI Chatbot** | Context-aware medical assistant for patient Q&A |
-| 🌐 **Full-Stack Architecture** | Decoupled FastAPI REST API + React/Next.js SPA |
+| 🔍 **Multi-Modal Scan Support** | Chest X-ray (NIH), COVID-19 radiography, cardiac MRI |
+| 🧠 **Deep Learning Inference** | MobileNetV2 — 89.51% test accuracy, sub-second prediction |
+| 🔄 **4-Role Clinical Workflow** | Patient → Doctor → Pharmacist → Admin approval pipeline |
+| 📄 **Auto PDF Report Generation** | WeasyPrint + Jinja2 HTML → professional diagnostic report |
+| 📧 **SMTP Email Delivery** | Encrypted PDF automatically emailed to patient on approval |
+| 🔒 **JWT + OTP 2FA Security** | Role-based access control, two-factor login for admin |
+| 💬 **Medical AI Chatbot** | Context-aware assistant for patient FAQ and workflow help |
+| 🎛️ **4 Role Dashboards** | Tailored UIs — Admin, Doctor, Pharmacist, Patient |
+| ⚡ **Live Status Tracking** | Real-time scan status badges across all role dashboards |
+| 📊 **Confidence Scoring** | Per-class probability output with automatic uncertainty flagging |
+| 🗄️ **SQLite / PostgreSQL** | Lightweight local dev DB with production migration path |
+| 🖥️ **Dark Theme SPA** | Responsive Next.js 14 frontend with cyan-accented dark UI |
 
----
+### 🎯 Use Cases
 
-## 📂 Project Structure
-
-```plaintext
-🧬 CLINICAL-SCAN-SUPPORT-SYSTEM/
-│
-├── 📖 README.md                          # Project documentation
-├── 📦 requirements.txt                   # Python backend dependencies
-├── 📄 LICENSE.txt                        # MIT License
-├── 📋 test_report.pdf                    # Latest test run report
-│
-├── 🔧 backend/                           # FastAPI REST API
-│   ├── 📁 models/                        # SQLAlchemy ORM models
-│   │   ├── __init__.py
-│   │   ├── otp.py                        # OTP verification model
-│   │   ├── schema.py                     # Scan/report schema model
-│   │   └── user.py                       # User account model
-│   │
-│   ├── 📁 routers/                       # API route handlers
-│   │   ├── admin.py                      # Admin management endpoints
-│   │   ├── admin_router.py               # Admin router registration
-│   │   ├── auth.py                       # Authentication endpoints
-│   │   ├── auth_router.py                # Auth router registration
-│   │   ├── chatbot.py                    # AI chatbot endpoint
-│   │   ├── doctor.py                     # Doctor workflow endpoints
-│   │   ├── otp.py                        # OTP send/verify endpoints
-│   │   ├── patient.py                    # Patient data endpoints
-│   │   ├── pharmacist.py                 # Pharmacist endpoints
-│   │   └── reports.py                    # Report generation & delivery
-│   │
-│   ├── 📁 schemas/                       # Pydantic request/response schemas
-│   │   └── user_schema.py                # User data validation schemas
-│   │
-│   ├── 📁 security/                      # Auth & access control
-│   │   ├── __init__.py
-│   │   ├── jwt_handler.py                # JWT token creation & validation
-│   │   ├── password.py                   # Bcrypt password hashing
-│   │   └── role_guard.py                 # RBAC role enforcement decorator
-│   │
-│   ├── 📁 services/                      # Business logic layer
-│   │   ├── ai_service.py                 # ML model inference + Grad-CAM
-│   │   └── email_service.py              # SMTP email delivery service
-│   │
-│   ├── 📁 templates/                     # Jinja2 HTML templates
-│   │   └── report_template.html          # PDF report HTML template
-│   │
-│   ├── config.py                         # App configuration & env vars
-│   ├── database.py                       # SQLAlchemy DB connection setup
-│   ├── init_db.py                        # Database table initialization
-│   ├── main.py                           # FastAPI app entry point
-│   └── seed_db.py                        # Database seed / demo data
-│
-├── 🌐 frontend/                          # Next.js React SPA
-│   ├── 📁 components/                    # Reusable UI components
-│   │   ├── ChatBot.js                    # AI chatbot widget
-│   │   ├── Navbar.js                     # Navigation bar with role links
-│   │   ├── OTPVerification.js            # OTP input + verify UI
-│   │   ├── ProtectedRoute.js             # Auth-guarded route wrapper
-│   │   ├── ReportDownloadButton.js       # Secure report download button
-│   │   ├── ScanTable.js                  # Scan history data table
-│   │   └── UploadScan.js                 # Drag-and-drop scan uploader
-│   │
-│   ├── 📁 context/
-│   │   └── UserContext.js                # Global auth & user state
-│   │
-│   ├── 📁 pages/                         # Next.js file-based routing
-│   │   ├── admin/
-│   │   │   └── index.js                  # Admin dashboard
-│   │   ├── doctor/
-│   │   │   └── index.js                  # Doctor dashboard
-│   │   ├── patient/
-│   │   │   └── index.js                  # Patient portal
-│   │   ├── pharmacist/
-│   │   │   └── index.js                  # Pharmacist view
-│   │   ├── _app.js                       # Next.js app wrapper + providers
-│   │   ├── index.js                      # Landing / home page
-│   │   ├── login.js                      # Login page
-│   │   └── register.js                   # Registration + OTP flow
-│   │
-│   ├── 📁 services/
-│   │   └── api.js                        # Axios API client (base URL, interceptors)
-│   │
-│   ├── 📁 styles/
-│   │   └── globals.css                   # Global CSS + Tailwind imports
-│   │
-│   └── package.json                      # Node.js dependencies
-│
-├── 🖼️ img/                               # Documentation & README images
-│   ├── ai_pipeline.png
-│   ├── architecture_diagram.png
-│   ├── confusion_matrix.png
-│   ├── dashboard_admin.png
-│   ├── dashboard_chatbot.png
-│   ├── dashboard_doctor.png
-│   ├── dashboard_patient.png
-│   ├── security_diagram.png
-│   ├── training_curve.png
-│   └── workflow_diagram.png
-│
-└── 🤖 models/                            # Trained ML model artifacts
-    ├── 📁 metadata/
-    │   └── class_labels.json             # Class index → label mapping
-    └── lung_model.h5                     # Trained MobileNetV2 weights
-```
+- **Hospital Radiology Departments** — Streamline chest X-ray and CT report generation with AI pre-screening
+- **COVID-19 Screening Clinics** — Real-time detection of COVID, Viral Pneumonia, and Lung Opacity patterns
+- **Cardiac Screening Centers** — Automated normal/abnormal cardiac MRI triage
+- **Telemedicine Platforms** — Remote scan submission with automated encrypted report delivery
+- **Medical Education** — Demonstrate AI-assisted diagnostics with an end-to-end working system
 
 ---
 
 ## 🏗️ System Architecture
 
 <div align="center">
-<img src="img/architecture_diagram.png" alt="System Architecture" width="900"/>
+<img src="img/architecture_diagram.png" alt="CSSS System Architecture" width="900"/>
 </div>
 
-### Component Summary
-
-| Layer | Technology | Responsibility |
-|---|---|---|
-| **Frontend** | Next.js 14 + React | Role-based SPA, scan upload, report download, chatbot UI |
-| **API** | FastAPI (Python) | REST endpoints, request validation, business logic routing |
-| **AI Service** | TensorFlow / Keras | MobileNetV2 inference, Grad-CAM heatmap generation |
-| **Auth & Security** | JWT + OTP + RBAC | Token auth, one-time password 2FA, role enforcement |
-| **Email Service** | SMTP | Encrypted PDF report delivery to patient/doctor email |
-| **Database** | SQLAlchemy ORM | User accounts, scan records, OTP tokens, reports |
-| **Models** | `.h5` + JSON | Pre-trained weights and class label mappings |
-
----
-
-## 🔌 API Endpoints
-
-The FastAPI backend exposes a clean REST API. Visit `/docs` for auto-generated Swagger UI after starting the server.
-
-### Authentication (`/auth`)
-
-| Method | Endpoint | Role | Description |
-|---|---|---|---|
-| `POST` | `/auth/register` | Public | Register new user account |
-| `POST` | `/auth/login` | Public | Login and receive JWT token |
-| `POST` | `/auth/logout` | Any | Invalidate session token |
-
-### OTP (`/otp`)
-
-| Method | Endpoint | Role | Description |
-|---|---|---|---|
-| `POST` | `/otp/send` | Public | Send OTP to user email |
-| `POST` | `/otp/verify` | Public | Verify OTP code for 2FA |
-
-### Doctor (`/doctor`)
-
-| Method | Endpoint | Role | Description |
-|---|---|---|---|
-| `POST` | `/doctor/upload` | Doctor | Upload scan for AI analysis |
-| `GET` | `/doctor/scans` | Doctor | List all scan records |
-| `GET` | `/doctor/scans/{id}` | Doctor | Get scan result + Grad-CAM |
-
-### Patient (`/patient`)
-
-| Method | Endpoint | Role | Description |
-|---|---|---|---|
-| `GET` | `/patient/history` | Patient | View personal scan history |
-| `GET` | `/patient/report/{id}` | Patient | Download encrypted PDF report |
-
-### Admin (`/admin`)
-
-| Method | Endpoint | Role | Description |
-|---|---|---|---|
-| `GET` | `/admin/users` | Admin | List all registered users |
-| `PUT` | `/admin/users/{id}` | Admin | Update user role / status |
-| `DELETE` | `/admin/users/{id}` | Admin | Remove user account |
-| `GET` | `/admin/stats` | Admin | System-wide analytics |
-
-### Reports (`/reports`)
-
-| Method | Endpoint | Role | Description |
-|---|---|---|---|
-| `POST` | `/reports/generate/{scan_id}` | Doctor | Generate PDF from scan |
-| `POST` | `/reports/email/{scan_id}` | Doctor | Email report to patient |
-
-### Chatbot (`/chatbot`)
-
-| Method | Endpoint | Role | Description |
-|---|---|---|---|
-| `POST` | `/chatbot/message` | Any | Send message, receive AI response |
-
----
-
-## 🧠 ML Pipeline & Workflow
-
-<div align="center">
-<img src="img/ai_pipeline.png" alt="AI Pipeline" width="900"/>
-</div>
-
-### Inference Code (`backend/services/ai_service.py`)
-
-```python
-import numpy as np
-import tensorflow as tf
-from tensorflow.keras.preprocessing import image
-import json, cv2
-
-# Load model and class labels once at startup
-model = tf.keras.models.load_model("models/lung_model.h5")
-with open("models/metadata/class_labels.json") as f:
-    class_labels = json.load(f)  # {"0": "Normal", "1": "Pneumonia", ...}
-
-def preprocess_image(img_path: str) -> np.ndarray:
-    img = image.load_img(img_path, target_size=(224, 224))
-    x   = image.img_to_array(img) / 255.0
-    return np.expand_dims(x, axis=0)
-
-def predict(img_path: str) -> dict:
-    x     = preprocess_image(img_path)
-    preds = model.predict(x)[0]
-    idx   = int(np.argmax(preds))
-    return {
-        "label":      class_labels[str(idx)],
-        "confidence": float(round(preds[idx] * 100, 2)),
-        "all_probs":  {class_labels[str(i)]: round(float(p)*100, 2)
-                       for i, p in enumerate(preds)}
-    }
-
-def generate_gradcam(img_path: str, layer_name="Conv_1") -> str:
-    x          = preprocess_image(img_path)
-    grad_model = tf.keras.models.Model(
-        inputs=model.inputs,
-        outputs=[model.get_layer(layer_name).output, model.output]
-    )
-    with tf.GradientTape() as tape:
-        conv_out, preds = grad_model(x)
-        loss = preds[:, tf.argmax(preds[0])]
-    grads   = tape.gradient(loss, conv_out)[0]
-    heatmap = tf.reduce_mean(grads, axis=(0, 1)).numpy()
-    heatmap = np.maximum(heatmap, 0) / (heatmap.max() + 1e-8)
-    orig    = cv2.imread(img_path)
-    heat    = cv2.resize(heatmap, (orig.shape[1], orig.shape[0]))
-    heat    = cv2.applyColorMap(np.uint8(255 * heat), cv2.COLORMAP_JET)
-    overlay = cv2.addWeighted(orig, 0.6, heat, 0.4, 0)
-    out_path = img_path.replace(".png", "_gradcam.png")
-    cv2.imwrite(out_path, overlay)
-    return out_path
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                    Next.js 14 Frontend  (Port 3001)                 │
+│   Patient Portal │ Doctor Dashboard │ Pharmacist View │ Admin Panel  │
+│      ChatBot Widget │ OTP Verification │ Drag-Drop Uploader          │
+└──────────────────────────────┬──────────────────────────────────────┘
+                               │ Axios REST API + JWT Bearer Token
+                               ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                      FastAPI Backend  (Port 8000)                   │
+│   /auth  /patient  /doctor  /pharmacist  /admin  /otp  /reports     │
+│   /chatbot                                                          │
+├─────────────────────────────────────────────────────────────────────┤
+│  JWT Bearer Auth │ OTP Email 2FA │ RBAC Role Guard │ Bcrypt Hashing │
+├───────────────┬───────────────────────┬─────────────────────────────┤
+│ TensorFlow AI │  WeasyPrint + Jinja2  │   SMTP Email Service        │
+│ MobileNetV2   │  PDF Report Template  │   Gmail STARTTLS            │
+│ 6 Classes     │  Auto-Generated PDF   │   Patient Delivery          │
+├───────────────┴───────────────────────┴─────────────────────────────┤
+│          SQLAlchemy ORM → SQLite (dev) / PostgreSQL (prod)          │
+│          Tables: users │ scans │ otp_records                        │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
-### Training Configuration
+### 🧩 Component Summary
+
+| Component | Technology | Responsibility |
+|---|---|---|
+| **Frontend SPA** | Next.js 14 + React 18 | Role-based dashboards, scan upload, report download |
+| **REST API** | FastAPI (Python) | Endpoints, business logic, auth enforcement |
+| **AI Inference** | TensorFlow 2.x / Keras | MobileNetV2 prediction, confidence scoring |
+| **PDF Engine** | WeasyPrint + Jinja2 | Clinical diagnostic report rendering |
+| **Auth Stack** | JWT + bcrypt + OTP | Stateless auth, password hashing, admin 2FA |
+| **Database** | SQLAlchemy + SQLite | ORM, scan lifecycle, user accounts, OTP records |
+| **Email Service** | smtplib + Gmail SMTP | OTP codes + PDF report delivery |
+| **Chatbot** | Rule-based NLP | Keyword-matched medical FAQ assistant |
+
+---
+
+## 📂 Project Structure
+
+<details>
+<summary><b>📁 Click to expand full project tree</b></summary>
+
+```
+CLINICAL-SCAN-SUPPORT-SYSTEM/
+│
+├── .env                              # Environment configuration
+├── requirements.txt                  # Python dependencies
+├── README.md                         # This file
+│
+├── backend/                          # FastAPI REST API
+│   ├── models/
+│   │   ├── user.py                   # User (id, name, email, role, password)
+│   │   ├── schema.py                 # Scan (id, patient_id, file_path, prediction, status...)
+│   │   └── otp.py                    # OTPRecord (email, otp, expires_at, used)
+│   │
+│   ├── routers/
+│   │   ├── auth_router.py            # POST /auth/register, /auth/login
+│   │   ├── patient.py                # POST /patient/upload, GET /patient/status/{id}
+│   │   ├── doctor.py                 # GET /doctor/pending, POST /doctor/analyze/{id}, /verify/{id}
+│   │   ├── pharmacist.py             # GET /pharmacist/queue, POST /pharmacist/complete/{id}
+│   │   ├── admin.py                  # GET /admin/pending, POST /admin/approve/{id}
+│   │   ├── otp.py                    # POST /otp/send, /otp/verify
+│   │   ├── chatbot.py                # POST /chatbot/
+│   │   └── reports.py                # GET /reports/pdf/{scan_id}
+│   │
+│   ├── security/
+│   │   ├── jwt_handler.py            # Token creation, verification, get_current_user
+│   │   ├── password.py               # bcrypt hash / verify
+│   │   └── role_guard.py             # require_role() dependency factory
+│   │
+│   ├── services/
+│   │   ├── ai_service.py             # TensorFlow MobileNetV2 inference (predict_scan)
+│   │   └── email_service.py          # SMTP: OTP email + PDF attachment delivery
+│   │
+│   ├── templates/
+│   │   └── report_template.html      # Jinja2 HTML → WeasyPrint PDF
+│   │
+│   ├── config.py                     # BASE_DIR + UPLOAD_DIR path config
+│   ├── database.py                   # SQLAlchemy engine + session + Base
+│   ├── init_db.py                    # Create all DB tables
+│   ├── main.py                       # FastAPI app + CORS + router registration
+│   └── seed_db.py                    # Seed 4 demo users
+│
+├── frontend/                         # Next.js 14 SPA
+│   ├── components/
+│   │   ├── ChatBot.js                # Floating chatbot with category badges
+│   │   ├── Navbar.js                 # Role-aware navigation bar
+│   │   ├── ScanTable.js              # Reusable scan history table component
+│   │   ├── UploadScan.js             # Drag-and-drop file uploader
+│   │   ├── OTPVerification.js        # 6-digit OTP input with resend timer
+│   │   ├── ProtectedRoute.js         # JWT-validated route guard
+│   │   └── ReportDownloadButton.js   # Secure PDF fetch and open
+│   │
+│   ├── pages/
+│   │   ├── index.js                  # Landing page
+│   │   ├── login.js                  # Login + OTP flow
+│   │   ├── register.js               # Registration page
+│   │   ├── patient/index.js          # Patient dashboard
+│   │   ├── doctor/index.js           # Doctor dashboard
+│   │   ├── pharmacist/index.js       # Pharmacist dashboard
+│   │   └── admin/index.js            # Admin dashboard
+│   │
+│   ├── services/api.js               # Axios client + auth interceptors
+│   ├── styles/globals.css            # Dark theme global CSS
+│   └── package.json
+│
+├── models/
+│   ├── lung_model.h5                 # Trained MobileNetV2 weights (~14 MB)
+│   ├── metadata/class_labels.json    # ["COVID","Lung_Opacity","NIH_MERGED","Normal","Sick","Viral_Pneumonia"]
+│   ├── metrics/training_metrics.json # Train / val / test accuracy
+│   └── plots/                        # Confusion matrix, training curves, misclassification plots
+│
+└── uploads/
+    └── patient_scans/                # Uploaded scans stored as {UUID}.{ext}
+```
+
+</details>
+
+---
+
+## 🧠 AI Model & Pipeline
+
+<div align="center">
+<img src="img/ai_pipeline.png" alt="AI Inference Pipeline" width="900"/>
+</div>
+
+### 📊 Dataset
+
+| Source | Classes | Images |
+|---|---|---|
+| NIH Chest X-ray Dataset | NIH_MERGED (14 pathologies combined) | 112,120 |
+| COVID-19 Radiography Database | COVID · Normal · Lung_Opacity · Viral_Pneumonia | 42,330 |
+| CAD Cardiac MRI Dataset | Normal · Sick | 63,425 |
+| **Total** | **6 disease classes** | **217,875** |
+
+### 🏛️ Model Architecture
+
+```
+Input Image (224 × 224 × 3)
+         ↓
+MobileNetV2 (ImageNet pretrained — feature extractor, frozen)
+         ↓
+GlobalAveragePooling2D
+         ↓
+Dense(256, activation='relu')
+         ↓
+Dropout(0.4)
+         ↓
+Dense(6, activation='softmax')   ← 6 disease classes
+         ↓
+Output: predicted_class + confidence_score + all_class_probabilities
+```
+
+### ⚙️ Training Configuration
 
 ```python
-from tensorflow.keras.applications import MobileNetV2
-from tensorflow.keras import layers, Model
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
-
-base  = MobileNetV2(weights="imagenet", include_top=False, input_shape=(224,224,3))
-base.trainable = False
-x     = layers.GlobalAveragePooling2D()(base.output)
-x     = layers.Dense(256, activation="relu")(x)
-x     = layers.Dropout(0.4)(x)
-out   = layers.Dense(4, activation="softmax")(x)   # 4 disease classes
-model = Model(base.input, out)
-
-model.compile(
-    optimizer=Adam(learning_rate=1e-4),
-    loss="categorical_crossentropy",
-    metrics=["accuracy"]
-)
-
-callbacks = [
+optimizer  = Adam(learning_rate=1e-4)
+loss       = categorical_crossentropy
+img_size   = (224, 224)
+callbacks  = [
     EarlyStopping(monitor="val_loss", patience=5, restore_best_weights=True),
     ReduceLROnPlateau(monitor="val_loss", factor=0.5, patience=3)
 ]
 ```
 
----
+### 📈 Performance Metrics
 
-## 📊 Performance Metrics
+<div align="center">
+<img src="img/training_curve.png" alt="Training Accuracy Curve" width="460"/>
+&nbsp;&nbsp;
+<img src="img/confusion_matrix.png" alt="Confusion Matrix" width="460"/>
+</div>
 
 | Metric | Value |
 |---|---|
-| **Test Accuracy** | 89.76% |
-| **Validation Accuracy** | 91.2% |
-| **Inference Speed** | < 1 second |
-| **Model Size** | ~14 MB (`.h5`) |
-| **Total Training Images** | 217,875 |
+| **Test Accuracy** | **89.51%** |
+| Validation Accuracy | 89.31% |
+| Training Accuracy | 92.97% |
+| Total Training Images | 217,875 |
+| Inference Speed | < 1 second |
+| Model Size | ~14 MB (`.h5`) |
+| Confidence Threshold | 75% (below → "Uncertain") |
 
+**Predicted Disease Classes:**
+`COVID` · `Lung_Opacity` · `NIH_MERGED` · `Normal` · `Sick` · `Viral_Pneumonia`
 
-### Per-Class Accuracy
+### 🔬 Inference Code (`backend/services/ai_service.py`)
 
-| Class | Precision | Recall | F1-Score |
-|---|---|---|---|
-| Normal | 93.1% | 94.2% | 93.6% |
-| Pneumonia | 88.4% | 87.9% | 88.1% |
-| COVID-19 | 91.7% | 90.3% | 91.0% |
-| Lung Opacity | 86.2% | 87.5% | 86.8% |
-
-<div align="left">
-    
-<img src="img/confusion_matrix.png" alt="Confusion Matrix" width="480"/>
-&nbsp;&nbsp;
-
-
-<img src="img/training_curve.png" alt="Training Curves" width="480"/>
-</div>
-
----
-
-## 🎛️ User Dashboards & RBAC
-
-<div align="center">
-<img src="img/workflow_diagram.png" alt="User Workflow" width="900"/>
-</div>
-
-### Role Permission Matrix
-
-| Permission | Admin | Doctor | Patient | Pharmacist |
-|---|---|---|---|---|
-| View all users | ✅ | ❌ | ❌ | ❌ |
-| Enable / disable users | ✅ | ❌ | ❌ | ❌ |
-| Upload scans | ❌ | ✅ | ❌ | ❌ |
-| View AI prediction + Grad-CAM | ❌ | ✅ | ❌ | ❌ |
-| Generate PDF report | ❌ | ✅ | ❌ | ❌ |
-| Email report to patient | ❌ | ✅ | ❌ | ❌ |
-| View own scan history | ❌ | ❌ | ✅ | ❌ |
-| Download own reports | ❌ | ❌ | ✅ | ❌ |
-| View prescriptions | ❌ | ❌ | ❌ | ✅ |
-| Use AI chatbot | ✅ | ✅ | ✅ | ✅ |
-| View system analytics | ✅ | ❌ | ❌ | ❌ |
-
-### Dashboard Previews
-
-<table>
-<tr>
-<td align="center"><img src="img/dashboard_admin.png" width="380"/><br/><b>Admin Dashboard</b><br/><sub>User management, system stats, audit logs</sub></td>
-<td align="center"><img src="img/dashboard_doctor.png" width="380"/><br/><b>Doctor Dashboard</b><br/><sub>Scan upload, AI predictions, report generation</sub></td>
-</tr>
-<tr>
-<td align="center"><img src="img/dashboard_patient.png" width="380"/><br/><b>Patient Portal</b><br/><sub>Scan history, report download, health insights</sub></td>
-<td align="center"><img src="img/dashboard_chatbot.png" width="380"/><br/><b>AI Chatbot</b><br/><sub>Context-aware medical Q&A assistant</sub></td>
-</tr>
-</table>
-
----
-
-## 🔒 Security & Compliance
-
-<div align="center">
-<img src="img/security_diagram.png" alt="Security Diagram" width="800"/>
-</div>
-
-### Security Stack
-
-```
-┌─────────────────────────────────────────────────────┐
-│               HTTPS / TLS 1.3 (Transport)           │
-├─────────────────────────────────────────────────────┤
-│       JWT Bearer Token (Stateless Auth)             │
-│       OTP Email Verification (2FA)                  │
-├─────────────────────────────────────────────────────┤
-│       RBAC Role Guard (role_guard.py)               │
-│       → Admin / Doctor / Patient / Pharmacist       │
-├─────────────────────────────────────────────────────┤
-│       Bcrypt Password Hashing (password.py)         │
-├─────────────────────────────────────────────────────┤
-│       AES-256 PDF Encryption (Report Delivery)      │
-├─────────────────────────────────────────────────────┤
-│       HIPAA-Compliant Audit Logging                 │
-└─────────────────────────────────────────────────────┘
-```
-
-### JWT Authentication (`backend/security/jwt_handler.py`)
+<details>
+<summary><b>View inference pipeline code</b></summary>
 
 ```python
-from jose import jwt, JWTError
-from datetime import datetime, timedelta
-from backend.config import settings
+def predict_scan(image_path: str) -> dict:
+    img = cv2.imread(image_path, cv2.IMREAD_COLOR)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img = cv2.resize(img, (IMG_WIDTH, IMG_HEIGHT))   # auto-detected from model
+    img = img.astype("float32") / 255.0
+    img = np.expand_dims(img, axis=0)
 
-def create_access_token(data: dict, expires_delta: int = 60) -> str:
-    payload = data.copy()
-    payload["exp"] = datetime.utcnow() + timedelta(minutes=expires_delta)
-    return jwt.encode(payload, settings.SECRET_KEY, algorithm="HS256")
+    predictions   = model.predict(img, verbose=0)
+    confidence    = float(np.max(predictions))
+    class_index   = int(np.argmax(predictions))
+    label         = CLASS_NAMES[class_index]
 
-def verify_token(token: str) -> dict:
-    try:
-        return jwt.decode(token, settings.SECRET_KEY, algorithms=["HS256"])
-    except JWTError:
-        raise HTTPException(status_code=401, detail="Invalid or expired token")
+    if confidence < CONFIDENCE_THRESHOLD:   # default 0.75
+        label = "Uncertain"
+
+    return {
+        "label":           label,
+        "confidence":      confidence,
+        "class_index":     class_index,
+        "all_predictions": {CLASS_NAMES[i]: float(predictions[0][i])
+                            for i in range(len(CLASS_NAMES))},
+        "threshold_used":  CONFIDENCE_THRESHOLD,
+    }
 ```
 
-### Role Guard (`backend/security/role_guard.py`)
-
-```python
-from fastapi import Depends, HTTPException
-
-def require_role(*allowed_roles: str):
-    def guard(token_data: dict = Depends(verify_token)):
-        if token_data.get("role") not in allowed_roles:
-            raise HTTPException(status_code=403, detail="Access denied")
-        return token_data
-    return guard
-
-# Usage:
-# @router.get("/admin/users", dependencies=[Depends(require_role("admin"))])
-```
-
-### Compliance Checklist
-
-- [x] JWT token expiry + refresh mechanism
-- [x] Email OTP 2-factor verification on registration
-- [x] Role-based access control enforced on every endpoint
-- [x] Passwords hashed with bcrypt (never stored plain)
-- [x] AES-256 encrypted PDF reports
-- [x] HTTPS-only transport (production deployment)
-- [x] Audit logging for all sensitive actions
-- [x] No PHI stored in logs or error messages
+</details>
 
 ---
 
-## 🛠️ Installation
+## 🔄 Clinical Workflow
+
+<div align="center">
+<img src="img/workflow_diagram.png" alt="Clinical Workflow Diagram" width="900"/>
+</div>
+
+The scan lifecycle moves through **5 statuses**, each requiring a different authenticated role:
+
+```
+┌──────────┐     ┌────────────────┐     ┌─────────────────┐     ┌───────────────────────┐     ┌──────────────┐
+│ PATIENT  │     │    DOCTOR      │     │     DOCTOR      │     │      PHARMACIST       │     │    ADMIN     │
+│ uploads  │────▶│  runs AI scan  │────▶│ adds clinical   │────▶│  adds prescription    │────▶│  approves +  │
+│  image   │     │                │     │     notes       │     │        notes          │     │  emails PDF  │
+└──────────┘     └────────────────┘     └─────────────────┘     └───────────────────────┘     └──────────────┘
+PENDING_AI    →    AI_ANALYZED      →    DOCTOR_VERIFIED     →    PHARMACIST_COMPLETED     →    REPORT_READY
+```
+
+| Status | Meaning |
+|---|---|
+| `PENDING_AI` | Scan uploaded, awaiting AI analysis |
+| `AI_ANALYZED` | MobileNetV2 prediction complete with confidence score |
+| `DOCTOR_VERIFIED` | Doctor reviewed AI results and added clinical notes |
+| `PHARMACIST_COMPLETED` | Pharmacist reviewed and added prescription notes |
+| `REPORT_READY` | Admin approved — PDF auto-generated and emailed to patient |
+
+---
+
+## 🎛️ Role Dashboards
+
+<details>
+<summary><b>👤 Patient Dashboard</b></summary>
+
+<img src="img/dashboard_patient.png" alt="Patient Dashboard" width="100%"/>
+
+- Upload scan images via drag-and-drop with real-time progress bar
+- View full scan history with status badges, AI predictions, and confidence scores
+- See doctor clinical notes and pharmacist prescription notes per scan
+- Download approved diagnostic PDF reports directly from the dashboard
+
+</details>
+
+<details>
+<summary><b>🩺 Doctor Dashboard</b></summary>
+
+<img src="img/dashboard_doctor.png" alt="Doctor Dashboard" width="100%"/>
+
+- View all patient scans in the work queue
+- Trigger AI analysis on any scan with one click — MobileNetV2 runs and returns prediction + confidence
+- Review AI prediction and add mandatory clinical verification notes
+- Advance scan to `DOCTOR_VERIFIED` status for pharmacist review
+
+</details>
+
+<details>
+<summary><b>💊 Pharmacist Dashboard</b></summary>
+
+<img src="img/dashboard_pharmacist.png" alt="Pharmacist Dashboard" width="100%"/>
+
+- View all `DOCTOR_VERIFIED` scans in the prescription queue
+- Review AI prediction, confidence score, and doctor clinical notes
+- Use quick-fill prescription templates or write custom medication notes
+- Mark scan `PHARMACIST_COMPLETED` to route to admin for final approval
+
+</details>
+
+<details>
+<summary><b>🛡️ Admin Dashboard</b></summary>
+
+<img src="img/dashboard_admin.png" alt="Admin Dashboard" width="100%"/>
+
+- Secure login with OTP two-factor authentication via email
+- View all scans in `PHARMACIST_COMPLETED` status awaiting approval
+- Approve any scan — triggers instant PDF generation + patient email delivery
+- Full scan details: AI prediction, doctor notes, pharmacist prescription, risk level
+
+</details>
+
+<details>
+<summary><b>💬 CSSS Medical Chatbot</b></summary>
+
+<img src="img/dashboard_chatbot.png" alt="CSSS Chatbot" width="100%"/>
+
+- Floating chatbot widget available on all dashboards
+- Keyword-matching responses across 10 categories: Medical, Workflow, AI, Auth, Scan, Result, Support, Admin, Greeting, Fallback
+- Color-coded category badges on every bot response
+- Chat history persisted locally, clear chat support, typing indicator animation
+
+</details>
+
+---
+
+## 🔌 API Endpoints
+
+Full interactive docs at `http://localhost:8000/docs` (Swagger UI) after starting the server.
+
+### Authentication `/auth`
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/auth/register` | Register new user (`name`, `email`, `password`, `role`) |
+| `POST` | `/auth/login` | Login → JWT token (admin requires OTP step) |
+
+### OTP `/otp`
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/otp/send` | Send 6-digit OTP to admin email (10-min expiry) |
+| `POST` | `/otp/verify` | Verify OTP code → returns full access JWT |
+
+### Patient `/patient`
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/patient/upload` | Upload scan image (JPG/PNG, multipart, max 10MB) |
+| `GET` | `/patient/status/{patient_id}` | Get all scans for this patient |
+
+### Doctor `/doctor`
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/doctor/pending` | All scans in work queue |
+| `POST` | `/doctor/analyze/{scan_id}` | Run MobileNetV2 inference on scan |
+| `POST` | `/doctor/verify/{scan_id}` | Add clinical notes → status: `DOCTOR_VERIFIED` |
+
+### Pharmacist `/pharmacist`
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/pharmacist/queue` | Scans in `DOCTOR_VERIFIED` status |
+| `POST` | `/pharmacist/complete/{scan_id}` | Add prescription → status: `PHARMACIST_COMPLETED` |
+
+### Admin `/admin`
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/admin/pending` | Scans awaiting final approval |
+| `POST` | `/admin/approve/{scan_id}` | Generate PDF + email patient + `REPORT_READY` |
+
+### Reports `/reports`
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/reports/pdf/{scan_id}` | Download diagnostic PDF (JWT protected, role scoped) |
+
+### Chatbot `/chatbot`
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/chatbot/` | Send message → keyword-matched medical response + category |
+
+---
+
+## 🔒 Security Architecture
+
+<div align="center">
+<img src="img/security_diagram.png" alt="Security Architecture" width="800"/>
+</div>
+
+```
+HTTPS / TLS (Production Transport)
+             ↓
+JWT Bearer Token   (HS256, 60-min expiry, fetches full user from DB)
+             ↓
+OTP Email 2FA      (Admin login only — 6-digit, 10-min window, auto-invalidated)
+             ↓
+RBAC Role Guard    (per-endpoint enforcement — admin / doctor / pharmacist / patient)
+             ↓
+bcrypt Hashing     (passwords never stored in plain text)
+             ↓
+UUID File Names    (scan files stored as {uuid}.ext — no patient PII in filename)
+```
+
+### 🔐 Role Permission Matrix
+
+| Permission | Admin | Doctor | Pharmacist | Patient |
+|---|:---:|:---:|:---:|:---:|
+| Upload scan | ❌ | ❌ | ❌ | ✅ |
+| Run AI analysis | ❌ | ✅ | ❌ | ❌ |
+| Add clinical notes | ❌ | ✅ | ❌ | ❌ |
+| Add prescription notes | ❌ | ❌ | ✅ | ❌ |
+| Approve & email report | ✅ | ❌ | ❌ | ❌ |
+| Download own PDF report | ❌ | ❌ | ❌ | ✅ |
+| Download any PDF report | ✅ | ✅ | ✅ | ❌ |
+| Use chatbot | ✅ | ✅ | ✅ | ✅ |
+| OTP 2FA login | ✅ | ❌ | ❌ | ❌ |
+
+---
+
+## 🛠️ Installation & Setup
 
 ### Prerequisites
 
 - Python 3.10+
-- Node.js 18+ and npm
+- Node.js 18.17+ and npm 9+
 - Git
 
 ### 1. Clone the Repository
@@ -481,159 +501,171 @@ pip install -r requirements.txt
 
 # Configure environment variables
 cp .env.example .env
-# Edit .env with your values (see Environment Variables section below)
+# Edit .env with your SMTP credentials and JWT secret
 
-# Initialize database tables
+# Initialize the database
 python backend/init_db.py
 
-# (Optional) Seed demo data
+# Seed 4 demo users
 python backend/seed_db.py
 
 # Start the FastAPI server
 uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-API: `http://localhost:8000`  
-Swagger UI: `http://localhost:8000/docs`
+API: `http://localhost:8000` · Swagger UI: `http://localhost:8000/docs`
 
 ### 3. Frontend Setup (Next.js)
 
 ```bash
 cd frontend
-
-# Install Node dependencies
 npm install
-
-# Start the development server
 npm run dev
 ```
 
-Frontend: `http://localhost:3000`
+Frontend: `http://localhost:3001`
 
 ### 4. Environment Variables
 
-Create a `.env` file in the project root:
-
 ```env
-# Database
-DATABASE_URL=sqlite:///./csss.db
+# ── Database ──────────────────────────────────────
+DATABASE_URL=sqlite:///database/csss.db
 
-# JWT Security
-SECRET_KEY=your-secret-key-change-in-production
-ACCESS_TOKEN_EXPIRE_MINUTES=60
+# ── JWT Security ──────────────────────────────────
+JWT_SECRET_KEY=your_secret_key_here
+JWT_ALGORITHM=HS256
+JWT_ACCESS_TOKEN_EXPIRE_MINUTES=60
 
-# Email (SMTP)
+# ── SMTP (Gmail App Password) ─────────────────────
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASSWORD=your-app-password
-EMAIL_FROM=your-email@gmail.com
+SMTP_USER=your_email@gmail.com
+SMTP_PASSWORD=your_16char_app_password
+EMAIL_SENDER=your_email@gmail.com
 
-# Model Paths
-MODEL_PATH=models/lung_model.h5
+# ── AI Model ──────────────────────────────────────
+AI_MODEL_PATH=models/lung_model.h5
 CLASS_LABELS_PATH=models/metadata/class_labels.json
+CONFIDENCE_THRESHOLD=0.75
+IMG_SIZE=224
 
-# Frontend API URL
+# ── Storage ───────────────────────────────────────
+UPLOAD_DIR=uploads/patient_scans
+REPORTS_DIR=reports/temp
+
+# ── Frontend ──────────────────────────────────────
 NEXT_PUBLIC_API_URL=http://localhost:8000
+FRONTEND_URL=http://localhost:3001
 ```
+
+> **Gmail SMTP Note:** Enable 2FA on your Google account → Google Account → Security → App Passwords → generate 16-character password. Use that as `SMTP_PASSWORD`.
 
 ---
 
 ## 🚀 Quick Start
 
-### Default Demo Accounts (after `seed_db.py`)
+### Demo Accounts (after `seed_db.py`)
 
 | Role | Email | Password |
 |---|---|---|
-| Admin | admin@csss.com | Admin@123 |
-| Doctor | doctor@csss.com | Doctor@123 |
-| Patient | patient@csss.com | Patient@123 |
-| Pharmacist | pharma@csss.com | Pharma@123 |
+| Admin | `admin@csss.com` | `Admin123` |
+| Doctor | `doctor@csss.com` | `Doctor123` |
+| Pharmacist | `pharma@csss.com` | `Pharma123` |
+| Patient | `patient@csss.com` | `Patient123` |
 
-### Doctor Workflow
-
-1. Login at `http://localhost:3000/login` with doctor credentials
-2. Navigate to **Doctor Dashboard**
-3. Drag and drop a chest X-ray image into the upload zone
-4. Review the AI prediction, confidence scores, and Grad-CAM heatmap
-5. Click **Generate Report** to create an encrypted PDF
-6. Click **Email to Patient** to send the report via SMTP
-
-### Patient Workflow
-
-1. Login with patient credentials
-2. View scan history and AI diagnosis results in **Patient Portal**
-3. Download encrypted PDF reports directly from the dashboard
+> 💡 The login page includes clickable test account buttons that auto-fill credentials.
 
 ---
 
-## 🧪 Testing
+## 🧪 End-to-End Workflow Demo
 
-```bash
-# Run all tests
-pytest
+```
+Step 1 ── PATIENT logs in
+          → Clicks "Upload Scan"
+          → Drags a chest X-ray JPG into the upload zone
+          → Real-time progress bar shows upload completion
+          → Scan appears in history as "Pending AI"
 
-# Run with coverage report
-pytest --cov=backend --cov-report=html
+Step 2 ── DOCTOR logs in
+          → Sees the scan in the work queue
+          → Clicks "Analyze" → MobileNetV2 runs inference
+          → Prediction (e.g. "COVID") + confidence score displayed
+          → Doctor adds clinical notes → clicks "Verify"
+          → Status updates to "Doctor Verified"
 
-# Run specific test category
-pytest tests/test_auth.py          # Authentication tests
-pytest tests/test_ai_service.py    # ML inference tests
-pytest tests/test_reports.py       # Report generation tests
-pytest tests/test_security.py      # RBAC & JWT tests
+Step 3 ── PHARMACIST logs in
+          → Sees scan in prescription queue
+          → Reviews AI prediction, confidence, and doctor notes
+          → Selects quick template or writes custom prescription
+          → Clicks "Complete" → status: "Pharmacist Completed"
+
+Step 4 ── ADMIN logs in (OTP email verification required)
+          → Sees scan in pending approvals list
+          → Reviews full scan details
+          → Clicks "Approve"
+          → PDF auto-generated (WeasyPrint + Jinja2 template)
+          → PDF emailed to patient automatically in background
+
+Step 5 ── PATIENT
+          → Receives email with professional PDF report attached
+          → Can also download directly from Patient Dashboard
+          → Report contains: scan image, AI prediction, confidence score,
+            risk level, doctor findings, prescription, and 3-party signatures
 ```
 
-### Test Coverage by Module
+---
 
-| Module | Coverage |
+## 📄 Generated PDF Report
+
+The auto-generated diagnostic report includes:
+
+- 🏥 **Hospital header** — clinic name, report ID, generation timestamp
+- 👤 **Patient information** — name, ID, age, gender, contact details
+- 🩻 **Scan information** — scan type, date, machine, contrast, quality
+- 🤖 **AI Analysis Results** — model, version, prediction badge, confidence %, risk level
+- 📝 **Clinical Findings** — doctor verification notes
+- 💊 **Prescription** — pharmacist medication notes
+- 🖼️ **Scan Image** — original scan embedded as base64
+- ✍️ **Signatures** — Radiologist, Pharmacist, and AI System signature blocks
+- ⚠️ **AI Notice** — professional disclaimer watermark
+
+---
+
+## 💬 CSSS Medical Chatbot
+
+The built-in CSSS Medical Assistant is a **keyword-matching chatbot** (not an LLM). It handles common questions across 10 categories:
+
+| Category | Topics Covered |
 |---|---|
-| `backend/security/` | 97% |
-| `backend/routers/auth.py` | 94% |
-| `backend/services/ai_service.py` | 91% |
-| `backend/services/email_service.py` | 88% |
-| `backend/routers/reports.py` | 90% |
-
-> 📋 See [`test_report.pdf`](test_report.pdf) for the latest full test run output.
+| 🩺 Medical | CT, MRI, X-ray scan type information |
+| 🔄 Workflow | Patient → Doctor → Pharmacist → Admin pipeline |
+| 🤖 AI | What predictions mean, confidence scores, uncertainty |
+| 🔓 Auth | Login, OTP, registration, password requirements |
+| 🖼️ Scan | Upload formats, file size limits, accepted types |
+| 📊 Result | How to read and understand your diagnostic report |
+| 📞 Support | Contact, feedback, troubleshooting |
+| 🔑 Admin | Admin OTP process explanation |
+| 👋 Greeting | Welcome and general help |
+| ❓ Fallback | Topic list when query is not recognized |
 
 ---
 
 ## 🗺️ Roadmap
 
 ### v2.0 — Q3 2026
-- [ ] PostgreSQL migration (replace SQLite for production scale)
-- [ ] Docker Compose multi-service deployment
-- [ ] WhatsApp report delivery via Twilio
-- [ ] Radiologist annotation tool with feedback loop
-- [ ] Mobile-responsive PWA frontend
+- [ ] PostgreSQL migration for production scale
+- [ ] Docker Compose full-stack deployment
+- [ ] WhatsApp report delivery via Twilio (already configured in `.env`)
+- [ ] DICOM file format support
+- [ ] Grad-CAM heatmap overlays for explainable AI
 
 ### v2.5 — Q4 2026
+- [ ] Mobile-responsive PWA frontend
+- [ ] Real-time scan status push notifications (WebSocket)
+- [ ] Multi-language PDF reports
+- [ ] EMR / EHR system integration
 - [ ] Federated learning across hospital nodes
-- [ ] DICOM file format support
-- [ ] Multi-language report generation
-- [ ] Real-time scan collaboration (Socket.IO)
-- [ ] Integration with hospital EMR/EHR systems
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how to get started:
-
-```bash
-# Fork the repo, then:
-git checkout -b feature/your-feature-name
-git commit -m "feat: add your feature"
-git push origin feature/your-feature-name
-# Open a Pull Request on GitHub
-```
-
-| Area | What We Need |
-|---|---|
-| 🧠 AI / ML | New model architectures, dataset integration |
-| 🌐 Frontend | UI improvements, accessibility, mobile support |
-| 🔧 Backend | New endpoints, performance optimization |
-| 🔒 Security | Penetration testing, security hardening |
-| 📖 Docs | Tutorials, API documentation, examples |
+- [ ] Audit logging for HIPAA compliance
 
 ---
 
@@ -641,66 +673,63 @@ git push origin feature/your-feature-name
 
 | | Name | Role | GitHub |
 |---|---|---|---|
-| <img src="https://github.com/Darkwebnew.png" width="60" style="border-radius:50%"/> | **Sriram V** | Lead Developer & AI/ML Engineer | [@Darkwebnew](https://github.com/Darkwebnew) |
-| <img src="https://github.com/surothaaman.png" width="60" style="border-radius:50%"/> | **Surothaaman R** | Backend Development & Security | [@surothaaman](https://github.com/surothaaman) |
-| <img src="https://github.com/Andrewvarghese653.png" width="60" style="border-radius:50%"/> | **V. S. Andrew Varghese** | Frontend Development | [@Andrewvarghese653](https://github.com/Andrewvarghese653) |
-| <img src="https://github.com/praveenck23009864.png" width="60" style="border-radius:50%"/> | **Praveen CK** | Database & Testing | [@praveenck23009864](https://github.com/praveenck23009864) |
-| <img src="https://github.com/swedha333.png" width="60" style="border-radius:50%"/> | **Dr. Swedha V** | Medical Domain Expertise | [@swedha333](https://github.com/swedha333) |
-| <img src="https://github.com/selvasachein.png" width="60" style="border-radius:50%"/> | **Dr. Selvakumar R** | AI/ML Advisor | [@selvasachein](https://github.com/selvasachein) |
+| <img src="https://github.com/Darkwebnew.png" width="52" style="border-radius:50%"/> | **Sriram V** | Lead Developer & AI/ML Engineer | [@Darkwebnew](https://github.com/Darkwebnew) |
+| <img src="https://github.com/surothaaman.png" width="52" style="border-radius:50%"/> | **Surothaaman R** | Backend Development & Security | [@surothaaman](https://github.com/surothaaman) |
+| <img src="https://github.com/Andrewvarghese653.png" width="52" style="border-radius:50%"/> | **V. S. Andrew Varghese** | Frontend Development | [@Andrewvarghese653](https://github.com/Andrewvarghese653) |
+| <img src="https://github.com/praveenck23009864.png" width="52" style="border-radius:50%"/> | **Praveen CK** | Database & Testing | [@praveenck23009864](https://github.com/praveenck23009864) |
+| <img src="https://github.com/swedha333.png" width="52" style="border-radius:50%"/> | **Dr. Swedha V** | Medical Domain Expertise | [@swedha333](https://github.com/swedha333) |
+| <img src="https://github.com/selvasachein.png" width="52" style="border-radius:50%"/> | **Dr. Selvakumar R** | AI/ML Advisor | [@selvasachein](https://github.com/selvasachein) |
 
 ---
 
-## 🙏 Acknowledgments
+## 🙏 Acknowledgements
 
-### Datasets
-- **NIH Chest X-ray Dataset** — 112,120 labeled radiographs (National Institutes of Health)
-- **COVID-19 Radiography Database** — 42,673 images (Kaggle / Qatar University)
-- **Cardiac MRI Dataset** — 63,082 multi-class cardiac images
+**Datasets (Kaggle)**
+- NIH Clinical Center — Chest X-Ray8 Dataset (112,120 images)
+- Tawsifur Rahman et al. — COVID-19 Radiography Database (42,330 images)
+- CAD Cardiac MRI Dataset (63,425 images)
 
-### Libraries & Frameworks
-- [FastAPI](https://fastapi.tiangolo.com/) — High-performance Python REST framework
+**Core Libraries**
+- [FastAPI](https://fastapi.tiangolo.com/) — High-performance Python REST API
 - [Next.js](https://nextjs.org/) — React framework with file-based routing
-- [TensorFlow / Keras](https://www.tensorflow.org/) — Deep learning framework
-- [SQLAlchemy](https://www.sqlalchemy.org/) — Python SQL ORM
+- [TensorFlow / Keras](https://www.tensorflow.org/) — Deep learning inference
+- [WeasyPrint](https://weasyprint.org/) — HTML → PDF report generation
+- [SQLAlchemy](https://www.sqlalchemy.org/) — Python ORM
 - [python-jose](https://github.com/mpdavis/python-jose) — JWT implementation
 - [Axios](https://axios-http.com/) — HTTP client for frontend API calls
 
-### Academic References
-- Howard et al., "MobileNets: Efficient Convolutional Neural Networks" (2017)
+**Academic References**
+- Howard et al., "MobileNets: Efficient CNNs for Mobile Vision Applications" (2017)
+- Sandler et al., "MobileNetV2: Inverted Residuals and Linear Bottlenecks" (2018)
 - Selvaraju et al., "Grad-CAM: Visual Explanations from Deep Networks" (2017)
+- Wang et al., "ChestX-ray8: Hospital-scale Chest X-ray Database and Benchmarks" (2017)
+- Chowdhury et al., "Can AI Help in Screening Viral and COVID-19 Pneumonia?" *IEEE Access* (2020)
 
 ---
 
 ## 📄 License
 
-This project is **proprietary software**. All rights reserved by the authors.
+This project is **proprietary software**. All rights reserved © 2026.
 
-> ⚠️ Unauthorized copying, distribution, or use of this software is strictly
-> prohibited and may result in legal action under the **Indian Copyright Act, 1957**.
-
-See [`LICENSE.txt`](LICENSE.txt) for full terms.
+> ⚠️ Unauthorized copying, distribution, or use of this software is strictly prohibited under the **Indian Copyright Act, 1957**. See [`LICENSE.txt`](LICENSE.txt) for full terms.
 
 ---
 
 ## 📞 Contact & Support
 
-<div align="center">
-
 | Channel | Link |
 |---|---|
-| 📧 **Email** | sriramnvks@gmail.com |
-| 🐛 **Bug Reports** | [GitHub Issues](https://github.com/Darkwebnew/Projectwork2/issues) |
-| 💬 **Discussions** | [GitHub Discussions](https://github.com/Darkwebnew/Projectwork2/discussions) |
-| 📖 **API Docs** | `http://localhost:8000/docs` (Swagger UI) |
-
-</div>
+| 📧 Email | sriramnvks@gmail.com |
+| 🐛 Bug Reports | [GitHub Issues](https://github.com/Darkwebnew/Projectwork2/issues) |
+| 💬 Discussions | [GitHub Discussions](https://github.com/Darkwebnew/Projectwork2/discussions) |
+| 📖 API Docs | `http://localhost:8000/docs` (Swagger UI) |
 
 ---
 
 <div align="center">
 
-**⭐ Star this repository if CSSS helped your project!**
+*Built with ❤️ for better healthcare diagnostics — Tamil Nadu, India 🇮🇳*
 
-*Built with ❤️ for better healthcare diagnostics*
+**⭐ Star this repository if CSSS helped your project!**
 
 </div>
