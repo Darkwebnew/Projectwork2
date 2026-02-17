@@ -1,8 +1,0 @@
-﻿fastapi
-uvicorn
-sqlalchemy
-passlib[bcrypt]
-python-jose[cryptography]
-tensorflow
-pillow
-python-multipart
