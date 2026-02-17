@@ -255,10 +255,12 @@ callbacks  = [
 ### 📈 Performance Metrics
 
 <div align="center">
-<img src="img/training_curve.png" alt="Training Accuracy Curve" width="460"/>
+<img src="img/training_curve.png" alt="Training Accuracy Curve" width="450"/>
 &nbsp;&nbsp;
-<img src="img/confusion_matrix.png" alt="Confusion Matrix" width="460"/>
+<img src="img/confusion_matrix.png" alt="Confusion Matrix" width="450"/>
 </div>
+
+---
 
 | Metric | Value |
 |---|---|
