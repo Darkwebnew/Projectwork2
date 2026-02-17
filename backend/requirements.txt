@@ -4,7 +4,7 @@ uvicorn[standard]==0.23.1
 
 # Database & ORM
 sqlalchemy==2.0.46
-databases[sqlite]==0.7.3
+databases[sqlite]==0.9.0
 
 # Security / Auth
 passlib[bcrypt]==1.7.4
@@ -12,11 +12,15 @@ python-jose[cryptography]==3.3.0
 
 # File handling
 python-multipart==0.0.6
-pillow==10.0.0
+pillow==9.5.0  # Compatible with Python 3.11
 
 # AI / ML
-tensorflow==2.13.0
+tensorflow==2.13.0  # Python 3.11 compatible
 
-# Optional utilities (if used)
+# Optional utilities (templating / PDF generation)
 Jinja2==3.1.2
 WeasyPrint==59.1
+
+# Extra dependencies sometimes required on Linux hosts
+cryptography>=41.0
+cffi>=1.15.1
