@@ -1,3 +1,5 @@
+# frontend/components/UploadScan.js
+
 import { useState, useRef, useEffect } from 'react';
 import { patientAPI } from '../services/api';
 

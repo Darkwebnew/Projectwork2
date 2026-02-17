@@ -1,4 +1,6 @@
-﻿import { useRouter } from 'next/router';
+﻿# frontend/components/Navbar.js
+
+import { useRouter } from 'next/router';
 
 // ─── Unified role config (title + subtitle + colors in one place) ───────────
 const ROLES = {

@@ -1,3 +1,5 @@
+# frontend/pages/index.js
+
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';

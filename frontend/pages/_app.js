@@ -1,4 +1,5 @@
-// pages/_app.js
+# frontend/pages/_app.js
+
 import '../styles/globals.css';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';

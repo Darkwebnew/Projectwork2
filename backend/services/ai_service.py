@@ -1,4 +1,6 @@
-﻿import os
+﻿# backend/services/ai_service.py
+
+import os
 import json
 import tensorflow as tf
 import numpy as np

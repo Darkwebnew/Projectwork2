@@ -1,4 +1,6 @@
-﻿import { useState, useEffect } from 'react';
+﻿# frontend/pages/pharmacist/index.js
+
+import { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import ProtectedRoute from '../../components/ProtectedRoute';
 import { pharmacistAPI, getUser } from '../../services/api';

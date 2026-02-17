@@ -1,3 +1,5 @@
+# frontend/pages/patient/index.js
+
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Navbar from '../../components/Navbar';
 import ProtectedRoute from '../../components/ProtectedRoute';

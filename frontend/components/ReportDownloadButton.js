@@ -1,5 +1,4 @@
-// frontend/components/ReportDownloadButton.js
-// Usage: <ReportDownloadButton scanId={scan.id} label="PDF" size="sm" />
+# frontend/components/ReportDownloadButton.js
 
 import { useState } from 'react';
 

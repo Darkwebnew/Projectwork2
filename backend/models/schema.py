@@ -1,4 +1,6 @@
-﻿from sqlalchemy import Column, Integer, String, Float, Text, DateTime
+﻿# backend\models\schema.py
+
+from sqlalchemy import Column, Integer, String, Float, Text, DateTime
 from datetime import datetime
 from backend.database import Base
 

@@ -1,3 +1,5 @@
+# backend/seed_db.py
+
 from sqlalchemy.orm import Session
 
 from backend.database import SessionLocal

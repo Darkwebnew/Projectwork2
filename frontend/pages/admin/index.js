@@ -1,3 +1,5 @@
+# frontend/pages/admin/index.js
+
 import { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import ProtectedRoute from '../../components/ProtectedRoute';

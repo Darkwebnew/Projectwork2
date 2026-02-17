@@ -1,4 +1,4 @@
-// components/ProtectedRoute.js
+# frontend/components/ProtectedRoute.js
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";

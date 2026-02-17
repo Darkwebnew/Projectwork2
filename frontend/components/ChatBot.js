@@ -1,3 +1,5 @@
+# frontend/components/ChatBot.js
+
 import { useState, useRef, useEffect } from 'react';
 import { chatbotAPI } from '../services/api';
 

@@ -1,3 +1,5 @@
+# backend/config.py
+
 from pathlib import Path
 
 # Path(__file__) = backend/config.py

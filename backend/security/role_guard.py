@@ -1,3 +1,5 @@
+# backend/security/role_guard.py
+
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from backend.security.jwt_handler import verify_token

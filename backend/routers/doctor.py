@@ -1,4 +1,6 @@
-﻿import logging
+﻿# backend/routers/doctor.py
+
+import logging
 from pathlib import Path
 
 from fastapi import APIRouter, Depends, HTTPException, Request

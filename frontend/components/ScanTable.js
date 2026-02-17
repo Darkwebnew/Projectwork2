@@ -1,3 +1,5 @@
+# frontend/components/ScanTable.js
+
 import { useMemo } from 'react';
 import { getStatusBadge, fmtDate } from '../services/api';
 
