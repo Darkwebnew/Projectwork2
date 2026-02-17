@@ -1,23 +1,9 @@
-# Web framework
 fastapi==0.95.2
 uvicorn==0.23.1
-
-# Database ORM
 sqlalchemy==2.0.46
-databases[sqlite]==0.7.3
-
-# Authentication & Security
+databases==0.9.0
 passlib[bcrypt]==1.7.4
 python-jose[cryptography]==3.3.0
-
-# File handling
+pillow==10.0.0
 python-multipart==0.0.6
-pillow==10.0.1
-
-# Machine learning / AI
-tensorflow==2.14.0
-
-# Optional: dotenv for environment variables
-python-dotenv==1.0.1
-
-# Email / SMTP (if using smtplib, no need to install)
+tensorflow==2.13.0
