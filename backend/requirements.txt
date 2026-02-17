@@ -12,7 +12,7 @@ python-jose[cryptography]==3.3.0
 
 # File handling
 python-multipart==0.0.6
-pillow==9.5.0  # compatible with Python 3.11
+pillow==9.5.0
 
 # AI / ML
 tensorflow==2.13.0
