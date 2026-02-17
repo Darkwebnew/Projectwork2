@@ -12,15 +12,11 @@ python-jose[cryptography]==3.3.0
 
 # File handling
 python-multipart==0.0.6
-pillow==9.5.0  # Compatible with Python 3.11
+pillow==9.5.0  # compatible with Python 3.11
 
 # AI / ML
-tensorflow==2.13.0  # Python 3.11 compatible
+tensorflow==2.13.0
 
-# Optional utilities (templating / PDF generation)
+# Optional utilities
 Jinja2==3.1.2
 WeasyPrint==59.1
-
-# Extra dependencies sometimes required on Linux hosts
-cryptography>=41.0
-cffi>=1.15.1
