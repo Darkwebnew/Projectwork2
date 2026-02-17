@@ -429,17 +429,84 @@ PENDING_AI    →    AI_ANALYZED      →    DOCTOR_VERIFIED     →    PHARMACI
 
 ---
 
-## 🎛️ Role Dashboards
+## 🎛️ User Interface Walkthrough
+
+<details>
+<summary><b>🏠 System Landing Page</b></summary>
+
+<img src="img/dashboard.png" alt="System Landing Page" width="100%"/>
+
+- Modern dark-themed medical UI built with Next.js 14
+- Clean navigation with role-based system access
+- Secure login and registration entry points
+- Fully responsive professional hospital interface
+- Fast-loading optimized frontend architecture
+
+</details>
+
+<details>
+<summary><b>📝 Registration Page</b></summary>
+
+<img src="img/dashboard_register.png" alt="Registration Page" width="100%"/>
+
+- Secure registration with role selection (Patient, Doctor, Pharmacist, Admin)
+- Password hashing using bcrypt encryption
+- Email validation and duplicate prevention
+- Role-based account creation
+- Clean medical-grade UI form design
+
+</details>
+
+<details>
+<summary><b>🔑 Login Page</b></summary>
+
+<img src="img/dashboard_signin.png" alt="Login Page" width="100%"/>
+
+- Secure JWT authentication system
+- Role-based automatic dashboard redirect
+- Token-based session management
+- Protected route authorization
+- Fast and secure login workflow
+
+</details>
+
+<details>
+<summary><b>📧 OTP Email Verification (Admin Only)</b></summary>
+
+<img src="img/dashboard_mail.png" alt="OTP Mail Verification" width="100%"/>
+
+- Secure 6-digit OTP verification system
+- Email-based admin two-factor authentication
+- 10-minute OTP expiration protection
+- One-time-use OTP validation
+- Prevents unauthorized admin access
+
+</details>
 
 <details>
 <summary><b>👤 Patient Dashboard</b></summary>
 
 <img src="img/dashboard_patient.png" alt="Patient Dashboard" width="100%"/>
 
-- Upload scan images via drag-and-drop with real-time progress bar
-- View full scan history with status badges, AI predictions, and confidence scores
-- See doctor clinical notes and pharmacist prescription notes per scan
-- Download approved diagnostic PDF reports directly from the dashboard
+- Upload scan images via drag-and-drop interface
+- Real-time upload progress tracking
+- View scan history with status badges
+- Display AI prediction and confidence score
+- Access doctor and pharmacist notes
+- Download approved diagnostic PDF reports
+
+</details>
+
+<details>
+<summary><b>📤 Patient Scan Upload Interface</b></summary>
+
+<img src="img/dashboard_patient_upload.png" alt="Patient Upload Interface" width="100%"/>
+
+- Drag-and-drop scan upload system
+- Supports JPG and PNG file formats
+- Secure UUID-based file storage
+- Automatic scan validation
+- Instant status tracking after upload
 
 </details>
 
@@ -448,10 +515,11 @@ PENDING_AI    →    AI_ANALYZED      →    DOCTOR_VERIFIED     →    PHARMACI
 
 <img src="img/dashboard_doctor.png" alt="Doctor Dashboard" width="100%"/>
 
-- View all patient scans in the work queue
-- Trigger AI analysis on any scan with one click — MobileNetV2 runs and returns prediction + confidence
-- Review AI prediction and add mandatory clinical verification notes
-- Advance scan to `DOCTOR_VERIFIED` status for pharmacist review
+- View all patient scans in doctor work queue
+- Trigger AI analysis using MobileNetV2 model
+- View prediction results and confidence score
+- Add mandatory clinical verification notes
+- Advance scan to DOCTOR_VERIFIED status
 
 </details>
 
@@ -460,10 +528,11 @@ PENDING_AI    →    AI_ANALYZED      →    DOCTOR_VERIFIED     →    PHARMACI
 
 <img src="img/dashboard_pharmacist.png" alt="Pharmacist Dashboard" width="100%"/>
 
-- View all `DOCTOR_VERIFIED` scans in the prescription queue
-- Review AI prediction, confidence score, and doctor clinical notes
-- Use quick-fill prescription templates or write custom medication notes
-- Mark scan `PHARMACIST_COMPLETED` to route to admin for final approval
+- View DOCTOR_VERIFIED scans
+- Review AI prediction and doctor notes
+- Add medication and prescription details
+- Use quick-fill prescription templates
+- Mark scan PHARMACIST_COMPLETED
 
 </details>
 
@@ -472,10 +541,12 @@ PENDING_AI    →    AI_ANALYZED      →    DOCTOR_VERIFIED     →    PHARMACI
 
 <img src="img/dashboard_admin.png" alt="Admin Dashboard" width="100%"/>
 
-- Secure login with OTP two-factor authentication via email
-- View all scans in `PHARMACIST_COMPLETED` status awaiting approval
-- Approve any scan — triggers instant PDF generation + patient email delivery
-- Full scan details: AI prediction, doctor notes, pharmacist prescription, risk level
+- Secure OTP-protected admin login
+- View PHARMACIST_COMPLETED scans
+- Approve diagnostic reports
+- Automatic PDF report generation
+- Secure report delivery to patient email
+- Full diagnostic workflow control
 
 </details>
 
@@ -484,10 +555,11 @@ PENDING_AI    →    AI_ANALYZED      →    DOCTOR_VERIFIED     →    PHARMACI
 
 <img src="img/dashboard_chatbot.png" alt="CSSS Chatbot" width="100%"/>
 
-- Floating chatbot widget available on all dashboards
-- Keyword-matching responses across 10 categories: Medical, Workflow, AI, Auth, Scan, Result, Support, Admin, Greeting, Fallback
-- Color-coded category badges on every bot response
-- Chat history persisted locally, clear chat support, typing indicator animation
+- Floating chatbot widget across dashboards
+- Provides instant system and medical assistance
+- Supports keyword-based intelligent responses
+- Chat history persistence
+- Typing animation and clean conversational UI
 
 </details>
 
