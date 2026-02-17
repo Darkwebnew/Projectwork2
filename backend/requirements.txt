@@ -1,16 +1,31 @@
+# FastAPI & ASGI
 fastapi==0.95.2
 uvicorn[standard]==0.23.1
 
+# Database
 sqlalchemy==2.0.46
 databases[sqlite]==0.9.0
 
+# Security & Auth
 passlib[bcrypt]==1.7.4
 python-jose[cryptography]==3.3.0
 
+# Multipart/Form Data
 python-multipart==0.0.6
+
+# Image processing
 pillow==10.0.1
 
+# TensorFlow / AI
 tensorflow==2.13.0
 
+# Templating
 Jinja2==3.1.2
-WeasyPrint==59.1
+
+# PDF generation - compatible versions
+WeasyPrint==58.0
+cairocffi==1.4.0
+tinycss2==1.2.1
+
+# Optional: if using email services
+email-validator==2.0.0
