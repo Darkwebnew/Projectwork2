@@ -18,7 +18,7 @@
 
 *From scan upload → AI inference → multi-role clinical review → encrypted PDF report delivery — fully automated in one platform*
 
-[🚀 Quick Start](#-quick-start) • [🏗️ Architecture](#️-system-architecture) • [🧠 AI Pipeline](#-ai-model--pipeline) • [🔌 API Docs](#-api-endpoints) • [🧪 Workflow Demo](#-end-to-end-workflow-demo) • [👥 Team](#-team)
+[🚀 Quick Start](#-quick-start) • [🏗️ Architecture](#️-system-architecture) • [🧠 AI Pipeline](#-ai-model--pipeline) • [🔌 API Docs](#-api-endpoints) • [🧪 Workflow Demo](#-end-to-end-workflow-demo) • [🎓 Model Training](#-model-training--dataset-preparation) • [👥 Team](#-team)
 
 ---
 
@@ -117,6 +117,8 @@ CLINICAL-SCAN-SUPPORT-SYSTEM/
 ├── .env                              # Environment configuration
 ├── requirements.txt                  # Python dependencies
 ├── README.md                         # This file
+├── split_lung_dataset.py             # Dataset train/val/test splitter (70/15/15)
+├── train_lung_model.py               # MobileNetV2 training with Grad-CAM
 │
 ├── backend/                          # FastAPI REST API
 │   ├── models/
@@ -175,11 +177,25 @@ CLINICAL-SCAN-SUPPORT-SYSTEM/
 │   ├── styles/globals.css            # Dark theme global CSS
 │   └── package.json
 │
+├── dataset/                          # Split dataset (created by split_lung_dataset.py)
+│   └── lung/
+│       ├── train/                    # 70% — 6 class folders
+│       ├── val/                      # 15% — 6 class folders
+│       └── test/                     # 15% — 6 class folders
+│
+├── Dataset/                          # Raw Kaggle dataset (input for splitter)
+│   ├── COVID/
+│   ├── Lung_Opacity/
+│   ├── NIH_MERGED/
+│   ├── Normal/
+│   ├── Sick/
+│   └── Viral_Pneumonia/
+│
 ├── models/
 │   ├── lung_model.h5                 # Trained MobileNetV2 weights (~14 MB)
 │   ├── metadata/class_labels.json    # ["COVID","Lung_Opacity","NIH_MERGED","Normal","Sick","Viral_Pneumonia"]
 │   ├── metrics/training_metrics.json # Train / val / test accuracy
-│   └── plots/                        # Confusion matrix, training curves, misclassification plots
+│   └── plots/                        # Confusion matrix, training curves, Grad-CAM misclassifications
 │
 └── uploads/
     └── patient_scans/                # Uploaded scans stored as {UUID}.{ext}
@@ -228,6 +244,8 @@ Output: predicted_class + confidence_score + all_class_probabilities
 optimizer  = Adam(learning_rate=1e-4)
 loss       = categorical_crossentropy
 img_size   = (224, 224)
+batch_size = 16
+epochs     = 15
 callbacks  = [
     EarlyStopping(monitor="val_loss", patience=5, restore_best_weights=True),
     ReduceLROnPlateau(monitor="val_loss", factor=0.5, patience=3)
@@ -287,6 +305,100 @@ def predict_scan(image_path: str) -> dict:
 ```
 
 </details>
+
+---
+
+## 🎓 Model Training & Dataset Preparation
+
+### Dataset Splitting (`split_lung_dataset.py`)
+
+Prepares the raw Kaggle dataset for training by creating train/validation/test splits:
+
+```python
+# 70/15/15 split with sklearn train_test_split
+SPLIT_RATIO = (0.7, 0.15, 0.15)   # train / val / test
+
+# Preserves class folder structure for ImageDataGenerator
+# Uses fixed random_state=42 for reproducibility
+# Creates dataset/lung/train, dataset/lung/val, dataset/lung/test
+```
+
+**Usage:**
+```bash
+python split_lung_dataset.py
+```
+
+**Output Structure:**
+```
+dataset/lung/
+├── train/
+│   ├── COVID/           (70% of COVID images)
+│   ├── Lung_Opacity/
+│   ├── NIH_MERGED/
+│   ├── Normal/
+│   ├── Sick/
+│   └── Viral_Pneumonia/
+├── val/                 (15% of each class)
+└── test/                (15% of each class)
+```
+
+### Model Training (`train_lung_model.py`)
+
+Trains MobileNetV2 on the split dataset with transfer learning and Grad-CAM visualization:
+
+<details>
+<summary><b>View training pipeline features</b></summary>
+
+**Key Features:**
+- **Transfer Learning:** MobileNetV2 base (ImageNet weights, frozen)
+- **Data Augmentation:** Rotation (10°), zoom (0.1), horizontal flip
+- **Callbacks:** EarlyStopping (patience=3), ModelCheckpoint (saves best model)
+- **Metrics Export:** Training curves, confusion matrix, classification report
+- **Grad-CAM Visualization:** Heatmap overlay on top 9 misclassified images
+
+**Training Code Snippet:**
+```python
+base_model = MobileNetV2(weights="imagenet", include_top=False, input_shape=(224,224,3))
+base_model.trainable = False
+
+x = base_model.output
+x = GlobalAveragePooling2D()(x)
+x = Dense(128, activation="relu")(x)
+outputs = Dense(len(CLASS_NAMES), activation="softmax")(x)
+
+model = Model(inputs=base_model.input, outputs=outputs)
+model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
+
+callbacks = [
+    EarlyStopping(patience=3, restore_best_weights=True),
+    ModelCheckpoint("models/lung_model.h5", save_best_only=True)
+]
+
+history = model.fit(
+    train_data, validation_data=val_data, epochs=15, callbacks=callbacks
+)
+```
+
+**Generated Artifacts:**
+- `models/lung_model.h5` — Trained model weights
+- `models/metadata/class_labels.json` — Class index mapping
+- `models/metrics/training_metrics.json` — Precision, recall, F1 per class
+- `models/plots/training_graph.png` — Accuracy/loss curves
+- `models/plots/confusion_matrix.png` — Per-class performance heatmap
+- `models/plots/top_misclassified_gradcam.png` — Grad-CAM visualizations
+
+</details>
+
+**Usage:**
+```bash
+# After splitting dataset
+python train_lung_model.py
+```
+
+**Training Environment:**
+- GPU: NVIDIA GPU (CUDA-enabled) recommended for faster training
+- RAM: 16GB+ recommended
+- Training Time: ~15 minutes on RTX 3060 (depends on GPU)
 
 ---
 
@@ -485,6 +597,7 @@ UUID File Names    (scan files stored as {uuid}.ext — no patient PII in filena
 - Python 3.10+
 - Node.js 18.17+ and npm 9+
 - Git
+- (Optional) NVIDIA GPU with CUDA for model training
 
 ### 1. Clone the Repository
 
@@ -559,6 +672,20 @@ FRONTEND_URL=http://localhost:3001
 ```
 
 > **Gmail SMTP Note:** Enable 2FA on your Google account → Google Account → Security → App Passwords → generate 16-character password. Use that as `SMTP_PASSWORD`.
+
+### 5. (Optional) Retrain the Model
+
+If you want to retrain the model with your own dataset:
+
+```bash
+# Step 1: Split dataset
+python split_lung_dataset.py
+
+# Step 2: Train model (requires GPU for faster training)
+python train_lung_model.py
+
+# Trained model will be saved to models/lung_model.h5
+```
 
 ---
 
@@ -657,13 +784,13 @@ The built-in CSSS Medical Assistant is a **keyword-matching chatbot** (not an LL
 - [ ] Docker Compose full-stack deployment
 - [ ] WhatsApp report delivery via Twilio (already configured in `.env`)
 - [ ] DICOM file format support
-- [ ] Grad-CAM heatmap overlays for explainable AI
+- [ ] Grad-CAM heatmap overlays in PDF reports for explainable AI
 
 ### v2.5 — Q4 2026
 - [ ] Mobile-responsive PWA frontend
 - [ ] Real-time scan status push notifications (WebSocket)
-- [ ] Multi-language PDF reports
-- [ ] EMR / EHR system integration
+- [ ] Multi-language PDF reports (English, Tamil, Hindi)
+- [ ] EMR / EHR system integration (HL7 FHIR)
 - [ ] Federated learning across hospital nodes
 - [ ] Audit logging for HIPAA compliance
 
