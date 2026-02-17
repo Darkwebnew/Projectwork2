@@ -1,22 +1,16 @@
-# FastAPI & ASGI server
 fastapi==0.95.2
 uvicorn[standard]==0.23.1
 
-# Database & ORM
 sqlalchemy==2.0.46
 databases[sqlite]==0.9.0
 
-# Security / Auth
 passlib[bcrypt]==1.7.4
 python-jose[cryptography]==3.3.0
 
-# File handling
 python-multipart==0.0.6
 pillow==10.0.1
 
-# AI / ML
 tensorflow==2.13.0
 
-# Optional utilities
 Jinja2==3.1.2
 WeasyPrint==59.1
