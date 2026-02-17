@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="img/banner.PNG" alt="CSSS Banner" width="100%"/>
+<img src="img/banner.png" alt="CSSS Banner" width="100%"/>
 
 # 🧬 Clinical Scan Support System
 
