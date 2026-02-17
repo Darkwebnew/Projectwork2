@@ -610,20 +610,6 @@ Full interactive docs at `http://localhost:8000/docs` (Swagger UI) after startin
 <img src="img/security_diagram.png" alt="Security Architecture" width="800"/>
 </div>
 
-```
-HTTPS / TLS (Production Transport)
-             ↓
-JWT Bearer Token   (HS256, 60-min expiry, fetches full user from DB)
-             ↓
-OTP Email 2FA      (Admin login only — 6-digit, 10-min window, auto-invalidated)
-             ↓
-RBAC Role Guard    (per-endpoint enforcement — admin / doctor / pharmacist / patient)
-             ↓
-bcrypt Hashing     (passwords never stored in plain text)
-             ↓
-UUID File Names    (scan files stored as {uuid}.ext — no patient PII in filename)
-```
-
 ### 🔐 Role Permission Matrix
 
 | Permission | Admin | Doctor | Pharmacist | Patient |
