@@ -1,48 +1,15 @@
-# FastAPI stack
 fastapi==0.95.2
 uvicorn[standard]==0.23.1
-starlette==0.27.0
-pydantic==1.10.26
-email-validator==2.0.0
-
-# Database
 sqlalchemy==2.0.45
 databases[sqlite]==0.9.0
 passlib[bcrypt]==1.7.4
-
-# Auth / Security
 python-jose[cryptography]==3.3.0
-
-# File uploads
 python-multipart==0.0.6
 pillow==10.0.1
-
-# ML / AI
 tensorflow==2.13.0
-numpy==1.24.3
-absl-py>=1.0.0
-astunparse>=1.6.0
-flatbuffers>=23.1.21
-gast<=0.4.0
-google-pasta>=0.1.1
-grpcio>=1.24.3,<2.0.0
-h5py>=2.9.0
-keras<2.14,>=2.13.1
-libclang>=13.0.0
-opt-einsum>=2.3.2
-protobuf>=3.20.3,<5.0.0
-tensorboard<2.14,>=2.13
-tensorflow-estimator<2.14,>=2.13
-termcolor>=1.1.0
-packaging>=20.0
-
-# Web / Template
 Jinja2==3.1.2
-
-# PDF / HTML rendering
 WeasyPrint==58.0
 cairocffi==1.4.0
 tinycss2==1.2.1
-
-# Optional typing fixes
-typing-extensions==4.5.0
+email-validator==2.0.0
+typing-extensions>=4.6.0
