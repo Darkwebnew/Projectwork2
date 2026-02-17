@@ -67,30 +67,6 @@ Built as a final-year engineering mini-project, CSSS tackles a real clinical bot
 <img src="img/architecture_diagram.png" alt="CSSS System Architecture" width="900"/>
 </div>
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                    Next.js 14 Frontend  (Port 3001)                 │
-│   Patient Portal │ Doctor Dashboard │ Pharmacist View │ Admin Panel  │
-│      ChatBot Widget │ OTP Verification │ Drag-Drop Uploader          │
-└──────────────────────────────┬──────────────────────────────────────┘
-                               │ Axios REST API + JWT Bearer Token
-                               ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                      FastAPI Backend  (Port 8000)                   │
-│   /auth  /patient  /doctor  /pharmacist  /admin  /otp  /reports     │
-│   /chatbot                                                          │
-├─────────────────────────────────────────────────────────────────────┤
-│  JWT Bearer Auth │ OTP Email 2FA │ RBAC Role Guard │ Bcrypt Hashing │
-├───────────────┬───────────────────────┬─────────────────────────────┤
-│ TensorFlow AI │  WeasyPrint + Jinja2  │   SMTP Email Service        │
-│ MobileNetV2   │  PDF Report Template  │   Gmail STARTTLS            │
-│ 6 Classes     │  Auto-Generated PDF   │   Patient Delivery          │
-├───────────────┴───────────────────────┴─────────────────────────────┤
-│          SQLAlchemy ORM → SQLite (dev) / PostgreSQL (prod)          │
-│          Tables: users │ scans │ otp_records                        │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
 ### 🧩 Component Summary
 
 | Component | Technology | Responsibility |
@@ -255,9 +231,9 @@ callbacks  = [
 ### 📈 Performance Metrics
 
 <div align="center">
-<img src="img/training_curve.png" alt="Training Accuracy Curve" width="450"/>
+<img src="img/training_curve.png" alt="Training Accuracy Curve" width="405"/>
 &nbsp;&nbsp;
-<img src="img/confusion_matrix.png" alt="Confusion Matrix" width="450"/>
+<img src="img/confusion_matrix.png" alt="Confusion Matrix" width="405"/>
 </div>
 
 ---
