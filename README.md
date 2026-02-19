@@ -64,7 +64,7 @@ Built as a final-year engineering mini-project, CSSS tackles a real clinical bot
 ## 🏗️ System Architecture
 
 <div align="center">
-<img src="img/architecture_diagram.png" alt="CSSS System Architecture" width="900"/>
+<img src="img/architecture_diagram.png" alt="CSSS System Architecture" width="100%"/>
 </div>
 
 ### 🧩 Component Summary
@@ -184,7 +184,7 @@ CLINICAL-SCAN-SUPPORT-SYSTEM/
 ## 🧠 AI Model & Pipeline
 
 <div align="center">
-<img src="img/ai_pipeline.png" alt="AI Inference Pipeline" width="900"/>
+<img src="img/ai_pipeline.png" alt="AI Inference Pipeline" width="100%"/>
 </div>
 
 ### 📊 Dataset
@@ -231,9 +231,11 @@ callbacks  = [
 ### 📈 Performance Metrics
 
 <div align="center">
-<img src="img/training_curve.png" alt="Training Accuracy Curve" width="405"/>
-&nbsp;&nbsp;
-<img src="img/confusion_matrix.png" alt="Confusion Matrix" width="405"/>
+<img src="img/training_curve.png" alt="Training Accuracy Curve" width="100%"/>
+</div>
+
+<div align="center">
+<img src="img/confusion_matrix.png" alt="Confusion Matrix" width="100%"/>
 </div>
 
 ---
@@ -383,19 +385,10 @@ python train_lung_model.py
 ## 🔄 Clinical Workflow
 
 <div align="center">
-<img src="img/workflow_diagram.png" alt="Clinical Workflow Diagram" width="900"/>
+<img src="img/workflow_diagram.png" alt="Clinical Workflow Diagram" width="100%"/>
 </div>
 
 The scan lifecycle moves through **5 statuses**, each requiring a different authenticated role:
-
-```
-┌──────────┐     ┌────────────────┐     ┌─────────────────┐     ┌───────────────────────┐     ┌──────────────┐
-│ PATIENT  │     │    DOCTOR      │     │     DOCTOR      │     │      PHARMACIST       │     │    ADMIN     │
-│ uploads  │────▶│  runs AI scan  │────▶│ adds clinical   │────▶│  adds prescription    │────▶│  approves +  │
-│  image   │     │                │     │     notes       │     │        notes          │     │  emails PDF  │
-└──────────┘     └────────────────┘     └─────────────────┘     └───────────────────────┘     └──────────────┘
-PENDING_AI    →    AI_ANALYZED      →    DOCTOR_VERIFIED     →    PHARMACIST_COMPLETED     →    REPORT_READY
-```
 
 | Status | Meaning |
 |---|---|
@@ -607,7 +600,7 @@ Full interactive docs at `http://localhost:8000/docs` (Swagger UI) after startin
 ## 🔒 Security Architecture
 
 <div align="center">
-<img src="img/security_diagram.png" alt="Security Architecture" width="800"/>
+<img src="img/security_diagram.png" alt="Security Architecture" width="100%"/>
 </div>
 
 ### 🔐 Role Permission Matrix
