@@ -831,7 +831,7 @@ The built-in CSSS Medical Assistant is a **keyword-matching chatbot** (not an LL
 |---|---|---|---|
 | <img src="https://github.com/Darkwebnew.png" width="52" style="border-radius:50%"/> | **Sriram V** | Lead Developer & AI/ML Engineer | [@Darkwebnew](https://github.com/Darkwebnew) |
 | <img src="https://github.com/surothaaman.png" width="52" style="border-radius:50%"/> | **Surothaaman R** | Backend Development & Security | [@surothaaman](https://github.com/surothaaman) |
-| <img src="https://github.com/ttamizharasi.png" width="52" style="border-radius:50%"/> | **Tamizharasi S** | Frontend Development | [@Andrewvarghese653](https://github.com/ttamizharasi) |
+| <img src="https://github.com/ttamizharasi.png" width="52" style="border-radius:50%"/> | **Tamizharasi S** | Frontend Development | [@ttamizharasi](https://github.com/ttamizharasi) |
 | <img src="https://github.com/praveenck23009864.png" width="52" style="border-radius:50%"/> | **Praveen CK** | Database & Testing | [@praveenck23009864](https://github.com/praveenck23009864) |
 | <img src="https://github.com/swedha333.png" width="52" style="border-radius:50%"/> | **Dr. Swedha V** | Medical Domain Expertise | [@swedha333](https://github.com/swedha333) |
 | <img src="https://github.com/selvasachein.png" width="52" style="border-radius:50%"/> | **Dr. Selvakumar R** | AI/ML Advisor | [@selvasachein](https://github.com/selvasachein) |
