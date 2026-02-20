@@ -7,7 +7,7 @@ All Rights Reserved.
 Authors:
   Sriram V               — Lead Developer & AI/ML Engineer
   Surothaaman R          — Backend Development & Security
-  V. S. Andrew Varghese  — Frontend Development
+  Tamizharasi S          — Frontend Development
   Praveen CK             — Database & Testing
   Dr. Swedha V           — Medical Domain Expertise
   Dr. Selvakumar R       — AI/ML Advisor
