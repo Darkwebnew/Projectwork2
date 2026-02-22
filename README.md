@@ -307,7 +307,7 @@ split      = 70% train / 15% val / 15% test
 
 ### 🔑 Auth Flow
 
-| Login | Register | OTP Email Verification |
+| Login | Register | Report Email Received (Auto-Generated PDF) |
 |-------|----------|----------------------|
 | ![Login](img/dashboard_signin.png) | ![Register](img/dashboard_register.png) | ![OTP](img/dashboard_mail.png) |
 
