@@ -809,7 +809,7 @@ Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before contributing.
 <br/>
 
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor%20on%20GitHub-%23EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/Darkwebnew)
-[![PayPal](https://img.shields.io/badge/Donate%20via%20PayPal-%2300457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/darkwebnew)
+[![PayPal](https://img.shields.io/badge/Donate%20via%20PayPal-%2300457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/sriramnvks)
 
 </div>
 
