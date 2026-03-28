@@ -2,11 +2,11 @@
 fastapi==0.95.2
 uvicorn[standard]==0.23.1
 starlette==0.27.0
-pydantic==1.10.7           # compatible with TensorFlow & SQLAlchemy
+pydantic==1.10.7
 email-validator==2.0.0
 
 # Database
-sqlalchemy==2.0.31          # downgraded to avoid typing-extensions conflict
+sqlalchemy==2.0.18
 databases[sqlite]==0.9.0
 passlib[bcrypt]==1.7.4
 
@@ -35,6 +35,7 @@ tensorboard<2.14,>=2.13
 tensorflow-estimator<2.14,>=2.13
 termcolor>=1.1.0
 packaging>=20.0
+typing-extensions==4.4.0
 
 # Web / Template
 Jinja2==3.1.2
@@ -43,6 +44,3 @@ Jinja2==3.1.2
 WeasyPrint==58.0
 cairocffi==1.4.0
 tinycss2==1.2.1
-
-# Typing extensions (explicitly compatible)
-typing-extensions==4.5.0
